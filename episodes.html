@@ -1,60 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Series de TV</title>
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-        
-        th, td {
-            text-align: left;
-            padding: 8px;
-        }
-        
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-        
-        th {
-            background-color: #4CAF50;
-            color: white;
-        }
-    </style>
+    <title>Mi Página Web</title>
+  <link rel="manifest" href="/manifest.json">
+  <style>
+    #banner {
+      display: none;
+      background-color: #f0f0f0;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-    <h1>Series de TV</h1>
-    <table>
-        <tr>
-            <th>Banner</th>
-            <th>Título</th>
-            <th>Fecha de publicación</th>
-            <th>Nombre de la serie</th>
-        </tr>
-        <tr>
-            <td><picture>
-                <source srcset="" type="image/webp">
-                <img class="preview-banner" src="https://www.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/b199406edeebc19a7f4e4412d6e1dfcc.jpe" alt="A ti, 2,000 años en el futuro. La caída de Shiganshina - Primera Parte" loading="lazy" data-t="card-image">
-            </picture></td>
-            <td>Episodio 1</td>
-            <td>10 de julio de 2023</td>
-            <td>Serie A</td>
-        </tr>
-        <!-- Agrega más filas para cada episodio -->
-    </table>
-</body>
+    <h1>Mi Página Web</h1>
+    
+    <!-- Contenido de tu página web -->
+  
+    <div id="banner">
+      <p>¡Instala nuestra PWA!</p>
+      <button id="btn-instalar">Instalar</button>
+    </div>
+  
+    <script>
+      let deferredPrompt;
+  
+      window.addEventListener('beforeinstallprompt', function(event) {
+        event.preventDefault();
+        deferredPrompt = event;
+  
+        const banner = document.getElementById('banner');
+        banner.style.display = 'block';
+  
+        const btnInstalar = document.getElementById('btn-instalar');
+        btnInstalar.addEventListener('click', instalarPWA);
+      });
+  
+      function instalarPWA() {
+        if (deferredPrompt) {
+          deferredPrompt.prompt();
+          deferredPrompt.userChoice.then(function(choiceResult) {
+            if (choiceResult.outcome === 'accepted') {
+              console.log('El usuario ha instalado la PWA');
+            } else {
+              console.log('El usuario ha cancelado la instalación de la PWA');
+            }
+  
+            deferredPrompt = null;
+            const banner = document.getElementById('banner');
+            banner.style.display = 'none';
+          });
+        }
+      }
+    </script>
+  </body>
 </html>
-
-<!--
-
-    <div class="flex-item">
-            <picture>
-                <source srcset="" type="image/webp">
-                <img class="preview-banner" src="https://www.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/b199406edeebc19a7f4e4412d6e1dfcc.jpe" alt="A ti, 2,000 años en el futuro. La caída de Shiganshina - Primera Parte" loading="lazy" data-t="card-image">
-            </picture>
-            <h3>Episodio 1</h3>
-            <p>10 de julio de 2023</p>
-            <p>Serie A</p>
-        </div>
--->
