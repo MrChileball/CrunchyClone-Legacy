@@ -27,34 +27,20 @@
   
     <script>
       let deferredPrompt;
-  
 
-        event.preventDefault();
-        deferredPrompt = event;
-  
-        const banner = document.getElementById('banner');
-        banner.style.display = 'block';
-  
-        const btnInstalar = document.getElementById('btn-instalar');
-        btnInstalar.addEventListener('click', instalarPWA);
-    
-  
-      function instalarPWA() {
-        if (deferredPrompt) {
-          deferredPrompt.prompt();
-          deferredPrompt.userChoice.then(function(choiceResult) {
-            if (choiceResult.outcome === 'accepted') {
-              console.log('El usuario ha instalado la PWA');
-            } else {
-              console.log('El usuario ha cancelado la instalación de la PWA');
-            }
-  
-            deferredPrompt = null;
-            const banner = document.getElementById('banner');
-            banner.style.display = 'none';
-          });
-        }
-      }
+window.addEventListener('beforeinstallprompt', function(event) {
+  event.preventDefault();
+  deferredPrompt = event;
+
+  const btnInstalar = document.getElementById('btn-instalar');
+  btnInstalar.style.display = 'block';
+  btnInstalar.addEventListener('click', mostrarInstruccionesInstalacion);
+});
+
+function mostrarInstruccionesInstalacion() {
+  // Mostrar instrucciones para instalar la PWA manualmente
+  alert("Para instalar esta aplicación, abre el menú de tu navegador y selecciona 'Agregar a pantalla de inicio'.");
+}
     </script>
   </body>
 </html>
