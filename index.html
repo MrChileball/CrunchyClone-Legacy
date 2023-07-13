@@ -5,6 +5,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
+    
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +14,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
     <!--<link rel="icon" type="image/x-icon" href="/images/favicon.ico">-->
     <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" href="/css/styles.css">
+    <script src="/javascript/service-worker.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    
 
 </head>
 <body>
@@ -97,7 +102,7 @@
             <div class="information-body">
                 <div class="title-line">
                     <h1>Attack on titan </h1>
-                    <a href="#">
+                    <a href="#" class="share-link" onclick="toggleShareMenu(event)">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-share" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                             <path d="M6 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
@@ -133,6 +138,38 @@
 
             </div>
         </div>
+
+
+        <!--OVERLAY DE OPACIDAD PARA EL MENU DE COMPARTIR ENLACE-->
+        <div class="overlay"></div>
+
+        <div class="share-menu" id="shareMenu">
+
+            <div class="close-icon" onclick="toggleShareMenu(event)">
+              <i class="fas fa-times"></i>
+            </div>
+            <div class="share-buttons">
+              <a href="#" class="share-button instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="share-button twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="share-button tiktok">
+                <i class="fab fa-tiktok"></i>
+              </a>
+              <a href="#" class="share-button whatsapp">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <a href="#" class="share-button reddit">
+                <i class="fab fa-reddit"></i>
+              </a>
+              <a href="#" class="share-button discord">
+                <i class="fab fa-discord"></i>
+              </a>
+            </div>
+          </div>
+          
             
 
 
@@ -263,13 +300,36 @@
 
             </section>
         
-
-
         <footer>
-
+                <div class="footer-container">
+                  <div class="footer-box">
+                    <h3>Conecta con nosotros</h4>
+                    <p>Youtube</p>
+                    <p>Facebook</p>
+                    <p>Instagram</p>
+                    <p>Twitter</p>
+                    <p>Tiktok</p>
+                  </div>
+                  <div class="footer-box">
+                    <h3>Crunchyroll</h4>
+                    <p>Sitio web</p>
+                    <p>Acerca</p>
+                    <p>Ayuda/FAQ</p>
+                  </div>
+                  <div class="footer-box">
+                    <h3>Contacto</h4>
+                    <p>Discord</p>
+                    <p>Revolt.chat</p>
+                    <p>Instagram</p>
+                  </div>
+                </div>
+                <div class="footer-aditional">
+                  <p>© Crunchyroll, LLC</p>
+                </div>
         </footer>
 
     </div>
+
 
     <!--
     <div role="tabpanel" class="tab-pane active">
@@ -280,7 +340,75 @@
     </div>
     <div class="Video" id="video_box">
         <iframe width="560" height="315" frameborder="0" src="https://ok.ru/videoembed/2745134746354" scrolling="no" allowfullscreen=""></iframe>
-    </div>-->   
+    </div>--> 
+    <script>
+        function toggleShareMenu(event) {
+  event.preventDefault();
+  const overlay = document.querySelector('.overlay');
+  const shareMenu = document.getElementById('shareMenu');
+  
+  overlay.style.display = (overlay.style.display === 'block') ? 'none' : 'block';
+  shareMenu.style.display = (shareMenu.style.display === 'block') ? 'none' : 'block';
+}
+
+function copyURL() {
+  const url = window.location.href;
+  navigator.clipboard.writeText(url)
+    .then(function() {
+      alert('Enlace copiado al portapapeles');
+    })
+    .catch(function(error) {
+      console.error('Error al copiar el enlace: ', error);
+    });
+}
+
+document.addEventListener('click', function(event) {
+  const overlay = document.querySelector('.overlay');
+  const shareMenu = document.getElementById('shareMenu');
+  const shareLink = document.querySelector('.share-link');
+
+  if (!shareLink.contains(event.target) && !shareMenu.contains(event.target)) {
+    overlay.style.display = 'none';
+    shareMenu.style.display = 'none';
+  }
+});
+
+    </script>  
+    <script>
+       let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', function(event) {
+  event.preventDefault();
+  deferredPrompt = event;
+
+  // Muestra una notificación o banner para agregar a la pantalla de inicio
+  mostrarBannerAgregarPWA();
+});
+
+function mostrarBannerAgregarPWA() {
+  const banner = document.getElementById('banner');
+  banner.style.display = 'block';
+
+  const btnAgregar = document.getElementById('btn-agregar');
+  btnAgregar.addEventListener('click', agregarPWA);
+}
+
+function agregarPWA() {
+  deferredPrompt.prompt();
+
+  deferredPrompt.userChoice.then(function(choiceResult) {
+    if (choiceResult.outcome === 'accepted') {
+      console.log('El usuario aceptó agregar la PWA');
+    } else {
+      console.log('El usuario rechazó agregar la PWA');
+    }
+
+    deferredPrompt = null;
+    const banner = document.getElementById('banner');
+    banner.style.display = 'none';
+  });
+}
+    </script>
     
     
     
