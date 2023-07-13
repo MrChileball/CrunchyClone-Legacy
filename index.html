@@ -28,7 +28,7 @@
     <script>
       let deferredPrompt;
   
-      window.addEventListener('beforeinstallprompt', function(event) {
+
         event.preventDefault();
         deferredPrompt = event;
   
@@ -37,7 +37,7 @@
   
         const btnInstalar = document.getElementById('btn-instalar');
         btnInstalar.addEventListener('click', instalarPWA);
-      });
+    
   
       function instalarPWA() {
         if (deferredPrompt) {
