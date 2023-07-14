@@ -26,24 +26,14 @@
     <div id="navbar-container"></div>
     
     
-    
-        <header class="main-container">
-            <picture>
-                <source srcset="" type="image/webp">
-                <img class="banner-mobile content-image__image--7tGlg" src="https://www.crunchyroll.com/imgsrv/display/thumbnail/480x720/catalog/crunchyroll/323c82257b2f6567fabbb7bd55bfa753.jpe" alt="Fondo de la serie" loading="lazy">
-            </picture>
-            <picture class="">
-                <source srcset="" type="image/webp">
-                <img class="banner-desktop image-container" src="https://www.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/1dea4b0c71a1b3837e27077b93bfc217.jpe" alt="Fondo de la serie" loading="lazy">
-            </picture>
-
-        </header>
+    <div id="main-container"></div>
+        
 
         <div class="body-color wrapper">
             <div class="information-body">
                 <div class="title-line">
                     <h1>Attack on titan </h1>
-                    <a href="#" class="share-link" onclick="toggleShareMenu(event)">
+                    <a href="#" id="share-link-button">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-share" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                             <path d="M6 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
@@ -81,38 +71,9 @@
         </div>
 
 
-        <!--OVERLAY DE OPACIDAD PARA EL MENU DE COMPARTIR ENLACE-->
-        <div class="overlay"></div>
-
-        <div class="share-menu" id="shareMenu">
-
-            <div class="close-icon" onclick="toggleShareMenu(event)">
-              <i class="fas fa-times"></i>
-            </div>
-            <div class="share-buttons">
-              <a href="#" class="share-button instagram">
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a href="#" class="share-button twitter">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="#" class="share-button tiktok">
-                <i class="fab fa-tiktok"></i>
-              </a>
-              <a href="#" class="share-button whatsapp">
-                <i class="fab fa-whatsapp"></i>
-              </a>
-              <a href="#" class="share-button reddit">
-                <i class="fab fa-reddit"></i>
-              </a>
-              <a href="#" class="share-button discord">
-                <i class="fab fa-discord"></i>
-              </a>
-            </div>
-          </div>
+        
           
-            
-
+        <div id="share-link"></div>
 
             <!--<article>
                 <div class="container">
@@ -123,117 +84,8 @@
                 </div>
 
             </article>-->
-        <div class="wrapper chapter-container">
-            <section class="chapter-list">
-                    <div class="chapter-item">
-                        <picture>
-                            <source srcset="" type="image/webp">
-                            <img class="preview-banner" src="https://www.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/b199406edeebc19a7f4e4412d6e1dfcc.jpe" alt="A ti, 2,000 años en el futuro. La caída de Shiganshina - Primera Parte" loading="lazy" data-t="card-image">
-                        </picture>
-                        <div style="width: 100%;">
-                            <div class="chapter-text">
-                                <h3>Attack on titan - S1</h3>
-                                <button onclick="window.location.href = 'https://www.ejemplo.com'" class="chapter-text button">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon-tabler icon-tabler-player-play" width="32" height="32" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                        <path d="M7 4v16l13 -8z"></path>
-                                     </svg>
-                                     <h3>reproducir</h3>
-
-                                </button>
-                            </div>                            
-                            <p class="custom-padding">E1 - A ti, 2,000 años en el futuro. La caída de Shiganshina - Primera Parte</p>
-                        </div>
-
-                    </div>
-                    <div class="chapter-item">
-                        <picture>
-                            <source srcset="" type="image/webp"><img class="preview-banner" src="https://www.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/b9fbee83c6c9a6353383a36b81d86121.jpe" alt="Ese día. La caída de Shiganshina - Segunda Parte" loading="lazy" data-t="card-image">
-                        </picture>
-                        <div style="width: 100%;">
-                            <div class="chapter-text">
-                                <h3>Attack on titan - S1</h3>
-                                <button onclick="window.location.href = 'https://www.ejemplo.com'" class="chapter-text button">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon-tabler icon-tabler-player-play" width="32" height="32" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                        <path d="M7 4v16l13 -8z"></path>
-                                     </svg>
-                                     <h3>reproducir</h3>
-
-                                </button>
-                            </div>                            
-                            <p class="custom-padding">E2 - Ese día. La caída de Shiganshina - Primera Parte</p>
-                        </div>
-                    </div>
-                    <div class="chapter-item">
-                        <picture>
-                            <source srcset="" type="image/webp">
-                            <img class="preview-banner
-                            " src="https://www.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/c7b6627f8880562f34268096f9c55c05.jpe" alt="Una tenue luz en la desesperación. La humanidad se levanta de nuevo - Primera Parte" loading="lazy" data-t="card-image">
-                        </picture>
-                        <div style="width: 100%;">
-                            <div class="chapter-text">
-                                <h3>Attack on titan - S1</h3>
-                                <button onclick="window.location.href = 'https://www.ejemplo.com'" class="chapter-text button">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon-tabler icon-tabler-player-play" width="32" height="32" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                        <path d="M7 4v16l13 -8z"></path>
-                                     </svg>
-                                     <h3>reproducir</h3>
-
-                                </button>
-                            </div>                            
-                            <p class="custom-padding">E3 - Una tenue luz en la desesperación. La humanidad se levanta de nuevo - Primera Parte</p>
-                        </div>
-                    </div>
-                    <div class="chapter-item">
-                        <picture>
-                            <source srcset="" type="image/webp">
-                            <img class="preview-banner" src="https://www.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/941f10ee007bd7a2704d00dfb460c8fa.jpe" alt="La noche de la ceremonia de graduación. La humanidad se levanta de nuevo - Segunda Parte" loading="lazy" data-t="card-image">
-                        </picture>
-                        <div style="width: 100%;">
-                            <div class="chapter-text">
-                                <h3>Attack on titan - S1</h3>
-                                <button onclick="window.location.href = 'https://www.ejemplo.com'" class="chapter-text button">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon-tabler icon-tabler-player-play" width="32" height="32" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                        <path d="M7 4v16l13 -8z"></path>
-                                     </svg>
-                                     <h3>reproducir</h3>
-
-                                </button>
-                            </div>                            
-                            <p class="custom-padding">E4 - La noche de la ceremonia de graduación. La humanidad se levanta de nuevo - Segunda Parte</p>
-                        </div>
-                    </div>
-                    <div class="chapter-item">
-                        <picture>
-                            <source srcset="" type="image/webp">
-                            <img class="preview-banner" src="https://www.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/cc56e86eb68f3afde55d62e008fddb44.jpe" alt="Primera batalla. La batalla de Trost - Primera Parte" loading="lazy" data-t="card-image">
-                        </picture>
-                        <div style="width: 100%;">
-                            <div class="chapter-text">
-                                <h3>Attack on titan - S1</h3>
-                                <button onclick="window.location.href = 'https://www.ejemplo.com'" class="chapter-text button">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon-tabler icon-tabler-player-play" width="32" height="32" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                        <path d="M7 4v16l13 -8z"></path>
-                                     </svg>
-                                     <h3>reproducir</h3>
-
-                                </button>
-                            </div>                            
-                            <p class="custom-padding">E5 - Primera batalla. La batalla de Trost - Primera Parte</p>
-                        </div>
-                    </div>
-
-
-                    
-
-
-            </section>
-            
-        </div>
+        <div id="chapter-module"></div>
+        
         </div>
 
 
@@ -241,33 +93,7 @@
 
             </section>
         
-        <footer>
-                <div class="footer-container">
-                  <div class="footer-box">
-                    <h3>Conecta con nosotros</h4>
-                    <p>Youtube</p>
-                    <p>Facebook</p>
-                    <p>Instagram</p>
-                    <p>Twitter</p>
-                    <p>Tiktok</p>
-                  </div>
-                  <div class="footer-box">
-                    <h3>Crunchyroll</h4>
-                    <p>Sitio web</p>
-                    <p>Acerca</p>
-                    <p>Ayuda/FAQ</p>
-                  </div>
-                  <div class="footer-box">
-                    <h3>Contacto</h4>
-                    <p>Discord</p>
-                    <p>Revolt.chat</p>
-                    <p>Instagram</p>
-                  </div>
-                </div>
-                <div class="footer-aditional">
-                  <p>© Crunchyroll, LLC</p>
-                </div>
-        </footer>
+        <div id="footer-container"></div>
 
     </div>
 
@@ -282,86 +108,124 @@
     <div class="Video" id="video_box">
         <iframe width="560" height="315" frameborder="0" src="https://ok.ru/videoembed/2745134746354" scrolling="no" allowfullscreen=""></iframe>
     </div>--> 
+
     <script>
-        function toggleShareMenu(event) {
-  event.preventDefault();
-  const overlay = document.querySelector('.overlay');
-  const shareMenu = document.getElementById('shareMenu');
-  
-  overlay.style.display = (overlay.style.display === 'block') ? 'none' : 'block';
-  shareMenu.style.display = (shareMenu.style.display === 'block') ? 'none' : 'block';
-}
-
-function copyURL() {
-  const url = window.location.href;
-  navigator.clipboard.writeText(url)
-    .then(function() {
-      alert('Enlace copiado al portapapeles');
-    })
-    .catch(function(error) {
-      console.error('Error al copiar el enlace: ', error);
-    });
-}
-
-document.addEventListener('click', function(event) {
-  const overlay = document.querySelector('.overlay');
-  const shareMenu = document.getElementById('shareMenu');
-  const shareLink = document.querySelector('.share-link');
-
-  if (!shareLink.contains(event.target) && !shareMenu.contains(event.target)) {
-    overlay.style.display = 'none';
-    shareMenu.style.display = 'none';
-  }
-});
-
-    </script>  
-    <script>
-       let deferredPrompt;
-
-window.addEventListener('beforeinstallprompt', function(event) {
-  event.preventDefault();
-  deferredPrompt = event;
-
-  // Muestra una notificación o banner para agregar a la pantalla de inicio
-  mostrarBannerAgregarPWA();
-});
-
-function mostrarBannerAgregarPWA() {
-  const banner = document.getElementById('banner');
-  banner.style.display = 'block';
-
-  const btnAgregar = document.getElementById('btn-agregar');
-  btnAgregar.addEventListener('click', agregarPWA);
-}
-
-function agregarPWA() {
-  deferredPrompt.prompt();
-
-  deferredPrompt.userChoice.then(function(choiceResult) {
-    if (choiceResult.outcome === 'accepted') {
-      console.log('El usuario aceptó agregar la PWA');
+      document.getElementById('share-link-button').addEventListener('click', function(event) {
+    if (isAndroid() || isIOS()) {
+      compartirEnlace();
     } else {
-      console.log('El usuario rechazó agregar la PWA');
+      toggleShareMenu(event);
     }
-
-    deferredPrompt = null;
-    const banner = document.getElementById('banner');
-    banner.style.display = 'none';
   });
-}
+
+  function isAndroid() {
+    return /Android/i.test(navigator.userAgent);
+  }
+
+  function isIOS() {
+    return /iPhone|iPad|iPod/i.test(navigator.userAgent);
+  }
     </script>
+
+<script>
+  
+  function compartirEnlace() {
+    if (navigator.share) {
+      navigator.share({
+          title: document.title,
+          url: 'https://shingekionline.netlify.app'
+        })
+        .then(() => {
+          console.log('Enlace compartido exitosamente');
+        })
+        .catch(error => {
+          console.error('Error al compartir el enlace:', error);
+        });
+    } else {
+      console.error('La API Web Share no está disponible en este navegador.');
+    }
+  }
+</script>
+
+<script>
+  // Función para mostrar u ocultar el menú de compartir
+  function toggleShareMenu(event) {
+    event.preventDefault(); // Prevenir el comportamiento predeterminado del evento
+    const overlay = document.querySelector('.overlay'); // Obtener el elemento del overlay
+    const shareMenu = document.getElementById('shareMenu'); // Obtener el elemento del menú de compartir
+
+    overlay.style.display = (overlay.style.display === 'block') ? 'none' : 'block'; // Alternar la visibilidad del overlay
+    shareMenu.style.display = (shareMenu.style.display === 'block') ? 'none' : 'block'; // Alternar la visibilidad del menú de compartir
+  }
+
+  // Función para copiar la URL actual al portapapeles
+  function copyURL() {
+    const url = window.location.href; // Obtener la URL actual
+    navigator.clipboard.writeText(url) // Escribir la URL en el portapapeles
+      .then(function() {
+        alert('Enlace copiado al portapapeles'); // Mostrar una alerta indicando que se copió el enlace
+      })
+      .catch(function(error) {
+        console.error('Error al copiar el enlace: ', error); // Manejar cualquier error que ocurra durante la copia del enlace
+      });
+  }
+
+  // Evento click para ocultar el menú de compartir cuando se hace clic fuera del menú o enlaces de compartir
+  document.addEventListener('click', function(event) {
+    const overlay = document.querySelector('.overlay'); // Obtener el elemento del overlay
+    const shareMenu = document.getElementById('shareMenu'); // Obtener el elemento del menú de compartir
+    const shareLink = document.querySelector('.share-link'); // Obtener el elemento del enlace de compartir
+
+    if (!shareLink.contains(event.target) && !shareMenu.contains(event.target)) {
+      overlay.style.display = 'none'; // Ocultar el overlay
+      shareMenu.style.display = 'none'; // Ocultar el menú de compartir
+    }
+  });
+</script>
+
+
     
     
     <script>
       // Cargar el contenido de navbar.html usando AJAX
-      var xhttp = new XMLHttpRequest();
+      /*var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
           document.getElementById("navbar-container").innerHTML = this.responseText;
         }
       };
       xhttp.open("GET", "/web-modules/nav-container.html", true);
-      xhttp.send();
+      xhttp.send();*/
+
+
+  // Carga asíncrona de contenido en un contenedor específico
+  function cargarContenido(url, contenedorId) {
+    fetch(url)
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById(contenedorId).innerHTML = data;
+      })
+      .catch(error => {
+        console.error(`Error al cargar el contenido desde ${url}: ${error}`);
+      });
+  }
+
+  // Carga los elementos desde un archivo externo (elementos.json)
+  fetch("/web-modules/modules.json")
+    .then(response => response.json())
+    .then(data => {
+      // Carga el contenido para cada elemento en paralelo
+      Promise.all(
+        data.map(elemento =>
+          cargarContenido(elemento.url, elemento.contenedorId)
+        )
+      ).then(() => {
+        console.log("Todos los elementos se han cargado correctamente.");
+      });
+    })
+    .catch(error => {
+      console.error(`Error al cargar los elementos: ${error}`);
+    }); 
     </script>
 </body>
 </html>
