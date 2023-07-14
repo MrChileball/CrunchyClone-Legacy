@@ -14,9 +14,9 @@ function redirectToEpisode(episode) {
         .then(response => response.json())
         .then(data => {
           if (data.hasOwnProperty(episode)) {
-            const episodeUrl = data[episode];
+            const episodeBlobUrl = data[episode];
             const videoPlayer = document.getElementById('videoPlayer');
-            videoPlayer.src = episodeUrl;
+            videoPlayer.src = episodeBlobUrl;
             videoPlayer.load();
           } else {
             console.error(`No se encontró información para el episodio "${episode}".`);
