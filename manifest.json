@@ -1,12 +1,12 @@
 {
-  "name": "Crunchyroll | Series y Anime",
+  "name": "Crunchyroll",
   "short_name": "Crunchyroll",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#212121",
   "theme_color": "#212121",
   "description": "Ve series y películas en un solo lugar!.",
-  "categories": ["multimedia", "entertainment", "multimedia"],
+  "categories": ["multimedia", "entertainment"],
   "icons": [
     {
       "src": "/images/favicon.png",
