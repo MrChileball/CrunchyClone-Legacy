@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Shingeki Online - Temporada 1</title>
+</head>
+<body>
+  <h1>Temporada 1</h1>
+  <ul>
+    <li><a href="season1.html?episode=1">Episodio 1</a></li>
+    <li><a href="season1.html?episode=2">Episodio 2</a></li>
+    <li><a href="season1.html?episode=3">Episodio 3</a></li>
+    <!-- Agrega más episodios según sea necesario -->
+  </ul>
+
+  <div class="video-container">
+    <video id="videoPlayer" controls></video>
+  </div>
+
+  <script src="episode-manager.js"></script>
+</body>
+</html>
