@@ -7,12 +7,16 @@ function cargarContenido(url, contenedorId) {
     fetch(url)
       .then(response => response.text())
       .then(data => {
-        document.getElementById(contenedorId).innerHTML = data;
+        const contenedor = document.getElementById(contenedorId);
+        contenedor.textContent = ''; // Limpiar el contenido existente
+        const contenidoSeguro = document.createTextNode(data);
+        contenedor.appendChild(contenidoSeguro);
       })
       .catch(error => {
         console.error(`Error al cargar el contenido desde ${url}: ${error}`);
       });
-   }
+  }
+  
    
    // Carga los elementos desde un archivo externo (elementos.json)
    fetch("/web-modules/modules.json")
