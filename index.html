@@ -184,6 +184,16 @@
         }
       });*/
 
+document.addEventListener('click', function(event) {
+  const overlay = document.querySelector('.overlay');
+  const shareMenu = document.getElementById('shareMenu');
+  const shareLink = document.querySelector('.share-link');
+
+  if (!shareLink.contains(event.target) && !shareMenu.contains(event.target)) {
+    overlay.style.display = 'none';
+    shareMenu.style.display = 'none';
+  }
+
       
       
       // Evento click para el botón de compartir
