@@ -91,13 +91,14 @@
     <script type="module">
       // Función para mostrar u ocultar el menú de compartir
       const toggleShareMenu = (event) => {
-        event.preventDefault();
-        const overlay = document.querySelector('.overlay');
-        const shareMenu = document.getElementById('shareMenu');
-      
-        overlay.style.display = (overlay.style.display === 'block') ? 'none' : 'block';
-        shareMenu.style.display = (shareMenu.style.display === 'block') ? 'none' : 'block';
-      };
+  event.preventDefault();
+  const overlay = document.querySelector('.overlay');
+  const shareMenu = document.querySelector('.share-menu');
+
+  overlay.style.display = (overlay.style.display === 'block' || overlay.style.display === '') ? 'none' : 'block';
+  shareMenu.style.display = (shareMenu.style.display === 'block' || shareMenu.style.display === '') ? 'none' : 'block';
+};
+
       
       // Función para copiar la URL actual al portapapeles
       const copyURL = async () => {
