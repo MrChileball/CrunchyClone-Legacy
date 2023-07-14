@@ -1,6 +1,6 @@
 // Función para redireccionar a un episodio específico
 function redirectToEpisode(episode) {
-    window.location.href = `https://shingekionline.netlify.app/season1?=episode${episode}`;
+    window.location.href = `https://shingekionline.netlify.app/season1.html?=episode${episode}`;
   }
   
   // Función para cargar el episodio correspondiente al valor del query
