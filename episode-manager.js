@@ -1,10 +1,5 @@
-// Función para redireccionar a un episodio específico
-function redirectToEpisode(episode) {
-    window.location.href = `https://shingekionline.netlify.app/season1.html?episode=${episode}`;
-  }
-  
-  // Función para cargar el episodio correspondiente al valor del query
-  function loadEpisodeFromQuery() {
+// Función para cargar el episodio correspondiente al valor del query
+function loadEpisodeFromQuery() {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const episode = urlParams.get('episode');
@@ -13,8 +8,9 @@ function redirectToEpisode(episode) {
       fetch('episode-list.json')
         .then(response => response.json())
         .then(data => {
-          if (data.hasOwnProperty(episode)) {
-            const episodeBlobUrl = data[episode];
+          const matchingEpisode = Object.keys(data).find(key => episode.includes(key));
+          if (matchingEpisode) {
+            const episodeBlobUrl = data[matchingEpisode];
             const videoPlayer = document.getElementById('videoPlayer');
             videoPlayer.src = episodeBlobUrl;
             videoPlayer.load();
