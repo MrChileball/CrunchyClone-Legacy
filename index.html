@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Montserrat:wght@300;400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/javascript/module.js" as="script">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
@@ -18,17 +19,13 @@
     <link rel="stylesheet" href="/css/styles.css">
     <script src="/javascript/service-worker.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    
+    <script src="/javascript/module.js" type="module" async></script>
 
 </head>
 <body>
 
     <div id="navbar-container"></div>
-    
-    
     <div id="main-container"></div>
-        
-
         <div class="body-color wrapper">
             <div class="information-body">
                 <div class="title-line">
@@ -51,44 +48,19 @@
                             <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
                         </svg>
                     </a>
-
                 </div>
                 <div class="subtitles-line">
                     <h3>subtitulado</h3>
-
                 </div>
                 <div class="rating-starts reviews-section">
-                    
-
                 </div>
                 <div class="description-box">
                     <p>Muchos años atrás, la humanidad estuvo al borde de la extinción con la aparición de unas criaturas gigantes que devoraban a todas las personas. Huyendo, la humanidad consiguió sobrevivir en una ciudad fortificada de altas murallas que se ha convertido en el último reducto de la civilización contra los Titanes que campan a sus anchas por el mundo. Ahora esa paz está a punto de verse interrumpida por una cadena de acontecimientos que llevará a desvelar qué son los Titanes y cómo aparecieron.</p>
-
                 </div>
-                
-
             </div>
         </div>
-
-
-        
-          
         <div id="share-link"></div>
-
-            <!--<article>
-                <div class="container">
-                    <video autoplay loop muted playsinline class="background-video">
-                    <source src="backgrounddasd.mp4" type="video/mp4">
-                    </video>
-                    <img src="https://www.crunchyroll.com/imgsrv/display/thumbnail/480x720/catalog/crunchyroll/323c82257b2f6567fabbb7bd55bfa753.jpe" alt="Imagen Grande" class="image">
-                </div>
-
-            </article>-->
         <div id="chapter-module"></div>
-        
-        </div>
-
-
             <section id="comments">
 
             </section>
@@ -109,123 +81,69 @@
         <iframe width="560" height="315" frameborder="0" src="https://ok.ru/videoembed/2745134746354" scrolling="no" allowfullscreen=""></iframe>
     </div>--> 
 
-    <script>
-      document.getElementById('share-link-button').addEventListener('click', function(event) {
-    if (isAndroid() || isIOS()) {
-      compartirEnlace();
-    } else {
-      toggleShareMenu(event);
-    }
-  });
-
-  function isAndroid() {
-    return /Android/i.test(navigator.userAgent);
-  }
-
-  function isIOS() {
-    return /iPhone|iPad|iPod/i.test(navigator.userAgent);
-  }
-    </script>
-
-<script>
-  
-  function compartirEnlace() {
-    if (navigator.share) {
-      navigator.share({
-          title: document.title,
-          url: 'https://shingekionline.netlify.app'
-        })
-        .then(() => {
-          console.log('Enlace compartido exitosamente');
-        })
-        .catch(error => {
-          console.error('Error al compartir el enlace:', error);
-        });
-    } else {
-      console.error('La API Web Share no está disponible en este navegador.');
-    }
-  }
-</script>
-
-<script>
-  // Función para mostrar u ocultar el menú de compartir
-  function toggleShareMenu(event) {
-    event.preventDefault(); // Prevenir el comportamiento predeterminado del evento
-    const overlay = document.querySelector('.overlay'); // Obtener el elemento del overlay
-    const shareMenu = document.getElementById('shareMenu'); // Obtener el elemento del menú de compartir
-
-    overlay.style.display = (overlay.style.display === 'block') ? 'none' : 'block'; // Alternar la visibilidad del overlay
-    shareMenu.style.display = (shareMenu.style.display === 'block') ? 'none' : 'block'; // Alternar la visibilidad del menú de compartir
-  }
-
-  // Función para copiar la URL actual al portapapeles
-  function copyURL() {
-    const url = window.location.href; // Obtener la URL actual
-    navigator.clipboard.writeText(url) // Escribir la URL en el portapapeles
-      .then(function() {
-        alert('Enlace copiado al portapapeles'); // Mostrar una alerta indicando que se copió el enlace
-      })
-      .catch(function(error) {
-        console.error('Error al copiar el enlace: ', error); // Manejar cualquier error que ocurra durante la copia del enlace
-      });
-  }
-
-  // Evento click para ocultar el menú de compartir cuando se hace clic fuera del menú o enlaces de compartir
-  document.addEventListener('click', function(event) {
-    const overlay = document.querySelector('.overlay'); // Obtener el elemento del overlay
-    const shareMenu = document.getElementById('shareMenu'); // Obtener el elemento del menú de compartir
-    const shareLink = document.querySelector('.share-link'); // Obtener el elemento del enlace de compartir
-
-    if (!shareLink.contains(event.target) && !shareMenu.contains(event.target)) {
-      overlay.style.display = 'none'; // Ocultar el overlay
-      shareMenu.style.display = 'none'; // Ocultar el menú de compartir
-    }
-  });
-</script>
-
-
-    
-    
-    <script>
-      // Cargar el contenido de navbar.html usando AJAX
-      /*var xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-          document.getElementById("navbar-container").innerHTML = this.responseText;
+    <script type="module">
+      // Función para mostrar u ocultar el menú de compartir
+      const toggleShareMenu = (event) => {
+        event.preventDefault();
+        const overlay = document.querySelector('.overlay');
+        const shareMenu = document.getElementById('shareMenu');
+      
+        overlay.style.display = (overlay.style.display === 'block') ? 'none' : 'block';
+        shareMenu.style.display = (shareMenu.style.display === 'block') ? 'none' : 'block';
+      };
+      
+      // Función para copiar la URL actual al portapapeles
+      const copyURL = async () => {
+        try {
+          const url = window.location.href;
+          await navigator.clipboard.writeText(url);
+          alert('Enlace copiado al portapapeles');
+        } catch (error) {
+          console.error('Error al copiar el enlace: ', error);
         }
       };
-      xhttp.open("GET", "/web-modules/nav-container.html", true);
-      xhttp.send();*/
-
-
-  // Carga asíncrona de contenido en un contenedor específico
-  function cargarContenido(url, contenedorId) {
-    fetch(url)
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById(contenedorId).innerHTML = data;
-      })
-      .catch(error => {
-        console.error(`Error al cargar el contenido desde ${url}: ${error}`);
+      
+      // Evento click para ocultar el menú de compartir cuando se hace clic fuera del menú o enlaces de compartir
+      document.addEventListener('click', (event) => {
+        const overlay = document.querySelector('.overlay');
+        const shareMenu = document.getElementById('shareMenu');
+        const shareLink = document.querySelector('.share-link');
+      
+        if (!shareLink.contains(event.target) && !shareMenu.contains(event.target)) {
+          overlay.style.display = 'none';
+          shareMenu.style.display = 'none';
+        }
       });
-  }
-
-  // Carga los elementos desde un archivo externo (elementos.json)
-  fetch("/web-modules/modules.json")
-    .then(response => response.json())
-    .then(data => {
-      // Carga el contenido para cada elemento en paralelo
-      Promise.all(
-        data.map(elemento =>
-          cargarContenido(elemento.url, elemento.contenedorId)
-        )
-      ).then(() => {
-        console.log("Todos los elementos se han cargado correctamente.");
+      
+      
+      // Evento click para el botón de compartir
+      const shareLinkButton = document.getElementById('share-link-button');
+      shareLinkButton.addEventListener('click', (event) => {
+        if (isAndroid() || isIOS()) {
+          compartirEnlace();
+        } else {
+          toggleShareMenu(event);
+        }
       });
-    })
-    .catch(error => {
-      console.error(`Error al cargar los elementos: ${error}`);
-    }); 
+      
+      // Función para detectar si el dispositivo es Android
+      const isAndroid = () => /Android/i.test(navigator.userAgent);
+      
+      // Función para detectar si el dispositivo es iOS
+      const isIOS = () => /iPhone|iPad|iPod/i.test(navigator.userAgent);
+      
+      // Función para compartir el enlace
+      const compartirEnlace = async () => {
+        try {
+          await navigator.share({
+            title: document.title,
+            url: 'https://google.com'
+          });
+          console.log('Enlace compartido exitosamente');
+        } catch (error) {
+          console.error('Error al compartir el enlace:', error);
+        }
+      };
     </script>
 </body>
 </html>
