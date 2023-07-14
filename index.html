@@ -16,30 +16,6 @@
     <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" href="/css/styles.css">
     <script src="/javascript/service-worker.js" defer></script>
-    <script>
-      // Obtener referencias a las imágenes
-const bannerMobileImg = document.querySelector('.banner-mobile');
-const bannerDesktopImg = document.querySelector('.banner-desktop');
-
-// Función para actualizar los atributos srcset de las imágenes según el ancho de la pantalla
-function actualizarImagenesSegunAnchoPantalla() {
-  const anchoPantalla = window.innerWidth;
-
-  if (anchoPantalla < 768) {
-    // Ancho de pantalla menor a 768px, cargar imagen mobile
-    bannerMobileImg.srcset = "/images/content/shingeki/banner-mobile.jpg";
-  } else {
-    // Ancho de pantalla mayor o igual a 768px, cargar imagen desktop
-    bannerDesktopImg.srcset = "/images/content/shingeki/banner-desktop.jpg";
-  }
-}
-
-// Actualizar las imágenes al cargar la página
-actualizarImagenesSegunAnchoPantalla();
-
-// Actualizar las imágenes al cambiar el tamaño de la ventana
-window.addEventListener('resize', actualizarImagenesSegunAnchoPantalla);
-    </script>
     <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />-->
     
 
