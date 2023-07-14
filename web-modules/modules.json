@@ -16,10 +16,6 @@
       "contenedorId": "chapter-module"
     },
     {
-      "url": "/web-modules/share-link.html",
-      "contenedorId": "share-link"
-    },
-    {
       "url": "/web-modules/comment-section.html",
       "contenedorId": "comment-section"
     }
