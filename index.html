@@ -170,17 +170,27 @@
         notification.style.borderRadius = '4px';
         notification.style.boxShadow = '0 2px 5px rgba(0, 0, 0, 0.3)';
         notification.style.zIndex = '9999';
+        notification.style.opacity = '0';
+        notification.style.transform = 'translateY(-100%)';
+        notification.style.transition = 'opacity 0.3s, transform 0.3s';
 
         document.body.appendChild(notification);
 
+        // Forzar el cálculo de las propiedades de estilo antes de aplicar la animación
+        notification.getBoundingClientRect();
+
+        notification.style.opacity = '1';
+        notification.style.transform = 'translateY(0)';
+
         setTimeout(() => {
           notification.style.opacity = '0';
-          notification.style.transform = 'translateY(-100%)';
+          notification.style.transform = 'translateY(100%)';
           setTimeout(() => {
             document.body.removeChild(notification);
-          }, 500);
+          }, 300);
         }, 2000);
-    };
+      };
+
 
 
       
