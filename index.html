@@ -152,6 +152,7 @@
     <script type="module">
       // Función para mostrar u ocultar el menú de compartir
       const toggleShareMenu = () => {
+          copyURL();
           showNotification('URL copiada al portapapeles');
       };
 
@@ -163,7 +164,7 @@
         // Establecer estilos CSS para la notificación
         notification.style.position = 'fixed';
         notification.style.top = '20px';
-        notification.style.left = '20px';
+        notification.style.right = '20px';
         notification.style.padding = '10px';
         notification.style.backgroundColor = '#333';
         notification.style.color = '#fff';
@@ -184,21 +185,18 @@
 
         setTimeout(() => {
           notification.style.opacity = '0';
-          notification.style.transform = 'translateY(100%)';
+          notification.style.transform = 'translateY(-100%)';
           setTimeout(() => {
             document.body.removeChild(notification);
           }, 300);
         }, 2000);
       };
-
-
-
       
       // Función para copiar la URL actual al portapapeles
       const copyURL = async () => {
         try {
           const url = window.location.href;
-          await navigator.clipboard.writeText(url);
+          await navigator.clipboard.writeText("https://shingekionline.netlify.app");
           alert('Enlace copiado al portapapeles');
         } catch (error) {
           console.error('Error al copiar el enlace: ', error);
