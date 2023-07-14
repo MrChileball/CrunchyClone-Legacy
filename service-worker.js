@@ -21,7 +21,7 @@ self.addEventListener('install', event => {
         '/index.html',
         '/css/styles.css',
         '/javascript/module.js',
-        '/images/favicon.png',
+        '/images/content/favicon.png',
         '/images/',
       ]);
     })
