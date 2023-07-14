@@ -151,14 +151,25 @@
 
     <script type="module">
       // Función para mostrar u ocultar el menú de compartir
-      const toggleShareMenu = (event) => {
-  event.preventDefault();
-  const overlay = document.querySelector('.overlay');
-  const shareMenu = document.querySelector('.share-menu');
+      const toggleShareMenu = () => {
+          showNotification('URL copiada al portapapeles');
+      };
 
-  overlay.style.display = (overlay.style.display === 'block' || overlay.style.display === '') ? 'none' : 'block';
-  shareMenu.style.display = (shareMenu.style.display === 'block' || shareMenu.style.display === '') ? 'none' : 'block';
-};
+      const showNotification = (message) => {
+        const notification = document.createElement('div');
+        notification.classList.add('notification');
+        notification.textContent = message;
+
+        document.body.appendChild(notification);
+
+        setTimeout(() => {
+          notification.style.transform = 'translateY(100%)';
+          setTimeout(() => {
+            document.body.removeChild(notification);
+          }, 500);
+        }, 2000);
+      };
+
 
       
       // Función para copiar la URL actual al portapapeles
@@ -172,29 +183,7 @@
         }
       };
       
-      // Evento click para ocultar el menú de compartir cuando se hace clic fuera del menú o enlaces de compartir
-      /*document.addEventListener('click', (event) => {
-        const overlay = document.querySelector('.overlay');
-        const shareMenu = document.getElementById('shareMenu');
-        const shareLink = document.querySelector('.share-link');
-      
-        if (!shareLink.contains(event.target) && !shareMenu.contains(event.target)) {
-          overlay.style.display = 'none';
-          shareMenu.style.display = 'none';
-        }
-      });*/
-
-document.addEventListener('click', function(event) {
-  const overlay = document.querySelector('.overlay');
-  const shareMenu = document.getElementById('shareMenu');
-  const shareLink = document.querySelector('.share-link');
-
-  if (!shareLink.contains(event.target) && !shareMenu.contains(event.target)) {
-    overlay.style.display = 'none';
-    shareMenu.style.display = 'none';
-  }
-
-      
+  
       
       // Evento click para el botón de compartir
       const shareLinkButton = document.getElementById('share-link-button');
@@ -202,7 +191,7 @@ document.addEventListener('click', function(event) {
         if (isAndroid() || isIOS()) {
           compartirEnlace();
         } else {
-          toggleShareMenu(event);
+          toggleShareMenu();
         }
       });
       
