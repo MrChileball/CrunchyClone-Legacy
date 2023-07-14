@@ -160,15 +160,27 @@
         notification.classList.add('notification');
         notification.textContent = message;
 
+        // Establecer estilos CSS para la notificación
+        notification.style.position = 'fixed';
+        notification.style.top = '20px';
+        notification.style.left = '20px';
+        notification.style.padding = '10px';
+        notification.style.backgroundColor = '#333';
+        notification.style.color = '#fff';
+        notification.style.borderRadius = '4px';
+        notification.style.boxShadow = '0 2px 5px rgba(0, 0, 0, 0.3)';
+        notification.style.zIndex = '9999';
+
         document.body.appendChild(notification);
 
         setTimeout(() => {
-          notification.style.transform = 'translateY(100%)';
+          notification.style.opacity = '0';
+          notification.style.transform = 'translateY(-100%)';
           setTimeout(() => {
             document.body.removeChild(notification);
           }, 500);
         }, 2000);
-      };
+    };
 
 
       
