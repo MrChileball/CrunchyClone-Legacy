@@ -438,6 +438,9 @@ nav {
       flex-direction: column;
       gap: 10rem;
     }
+    .video-player{
+      padding-top: 85%;
+    }
 }
   @media (min-width:800px){
     .icon-logo-desktop{
@@ -451,9 +454,7 @@ nav {
     .banner-desktop{
         display: block;
     }
-    .video-player{
-      padding-top: 85%;
-    }
+    
     
 
 
