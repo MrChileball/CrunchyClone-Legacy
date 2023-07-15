@@ -54,6 +54,7 @@ p{
 }
 .hover-orange{
   color: var(--custom-white);
+  transition: all 0.3s ease;
 }
 .hover-orange:hover{
   color: var(--custom-tangerine);
