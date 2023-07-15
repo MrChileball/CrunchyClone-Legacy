@@ -375,6 +375,7 @@ nav {
   .flex-standard{
     display:flex;
     flex-direction: row;
+    gap: 2rem;
   }
   
   
@@ -436,6 +437,10 @@ nav {
     }
     .banner-desktop{
         display: block;
+    }
+    .flex-standard{
+      flex-direction: column;
+      gap: 10rem;
     }
 
 
