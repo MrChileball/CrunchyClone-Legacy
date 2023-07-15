@@ -52,6 +52,12 @@ a {
 p{
     font-weight: 300;
 }
+.hover-orange{
+  color: var(--custom-white);
+}
+.hover-orange:hover{
+  color: var(--custom-tangerine);
+}
 .custom-padding{
   padding: 2px;
   margin: 2px;
