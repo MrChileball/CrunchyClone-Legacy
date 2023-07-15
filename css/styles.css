@@ -438,7 +438,7 @@ nav {
       flex-direction: column;
       gap: 10rem;
     }
-    .video-player{
+    .video-container{
       padding-top: 85%;
     }
 }
@@ -515,6 +515,9 @@ nav {
     }
     .video-player{
       max-width: 100%;
+    }
+    .video-container{
+      padding-top: 45%;
     }
     
     
