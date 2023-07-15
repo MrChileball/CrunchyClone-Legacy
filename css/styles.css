@@ -79,10 +79,17 @@ p{
 .body-color{
   padding-top: 2rem;
   padding-bottom: 2.5rem;
-  padding-left: 20%;
-  padding-right: 20%;
+  
   background-color:#000000;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.padding-20{
+  padding-left: 20%;
+  padding-right: 20%;
+}
+.padding-12{
+  padding-left: 12%;
+  padding-right: 12%;
 }
 
 
@@ -353,7 +360,17 @@ nav {
   }
   .current-media-info{
     display: flex;
+    flex-direction: column;
 
+  }
+  .current-media-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .current-media-parent-ref{
+    display: flex;
+    gap: 0.34rem;
   }
   .flex-standard{
     display:flex;
@@ -458,10 +475,14 @@ nav {
       align-items: center;
       gap: 4rem;
     }
-    .body-color {
-      padding-top: 12rem;
-      padding-bottom: 15rem;
-  }
+  .padding-20 {
+    padding-top: 12rem;
+    padding-bottom: 15rem;
+}
+.padding-12 {
+  padding-top: 12rem;
+  padding-bottom: 15rem;
+}
     .chapter-item {
       justify-content: normal;
       gap: 9rem;
