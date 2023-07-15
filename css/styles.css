@@ -341,15 +341,23 @@ nav {
 
   .video-container {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #070707;
     
   }
   .video-player{
     display: flex;
 
+
   }
   .description-container{
     display: flex;
 
+  }
+  .flex-standard{
+    display:flex;
+    flex-direction: row;
   }
   
   
