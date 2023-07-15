@@ -425,6 +425,10 @@ nav {
       flex-direction: column;
       align-items: flex-start;
     }
+    .flex-standard{
+      flex-direction: column;
+      gap: 10rem;
+    }
 }
   @media (min-width:800px){
     .icon-logo-desktop{
@@ -438,10 +442,7 @@ nav {
     .banner-desktop{
         display: block;
     }
-    .flex-standard{
-      flex-direction: column;
-      gap: 10rem;
-    }
+    
 
 
 }
