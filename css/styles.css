@@ -362,7 +362,8 @@ nav {
     position: absolute;
     top: 0;
     width: 100%;
-    height: 100%
+    height: 100%;
+    max-width: 100rem;
 
 
   }
@@ -450,6 +451,9 @@ nav {
     .banner-desktop{
         display: block;
     }
+    .video-player{
+      padding-top: 85%;
+    }
     
 
 
@@ -507,6 +511,9 @@ nav {
     .button{
       font-size: 3rem;
       border-radius: 12px;
+    }
+    .video-player{
+      max-width: 100%;
     }
     
     
