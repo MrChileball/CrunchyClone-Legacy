@@ -2,13 +2,28 @@
   "episodes": [
     {
       "title": "Episodio 1",
-      "description": "Descripción del Episodio 1",
+      "description": "E1 - A ti, 2,000 años en el futuro. La caída de Shiganshina - Primera Parte",
       "source": "https://streamwish.to/e/r5ikyog88shf"
     },
     {
       "title": "Episodio 2",
-      "description": "No te imaginas como odio maldito guatemala",
+      "description": "E2 - Ese día. La caída de Shiganshina - Primera Parte",
       "source": "https://streamwish.to/e/6eaz0tqakqnm"
+    },
+    {
+      "title": "Episodio 3",
+      "description": "E3 - Una tenue luz en la desesperación. La humanidad se levanta de nuevo - Primera Parte",
+      "source": "https://streamwish.to/e/ea1hjs33j9n9"
+    },
+    {
+      "title": "Episodio 4",
+      "description": "E4 - La noche de la ceremonia de graduación. La humanidad se levanta de nuevo - Segunda Parte",
+      "source": "https://streamwish.to/e/xdgy0afyrf95"
+    },
+    {
+      "title": "Episodio 5",
+      "description": "E5 - Primera batalla. La batalla de Trost - Primera Parte",
+      "source": "https://streamwish.to/e/73m9vh4vruo9"
     }
   ]
 }
