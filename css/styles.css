@@ -431,7 +431,6 @@ nav {
 #icon-heart:not(.new-icon) {
   animation: unfillHeart 0.4s;
 }
-
   
   /* AJUSTES PARA PANTALLAS DE BAJA O ALTA RESOLUCIÓN */
   @media (max-width: 768px){

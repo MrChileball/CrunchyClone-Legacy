@@ -196,15 +196,15 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Event listener para cambiar el ícono cuando se hace clic
-document.getElementById('heart-icon-button').addEventListener('click', cambiarIcono);
-
 // Verificar el estado del corazón en localStorage al cargar la página
 const iconHeart = document.getElementById('icon-heart');
 const isIconNew = localStorage.getItem('iconHeartStatus') === 'new-icon';
 if (isIconNew) {
   iconHeart.classList.add('new-icon');
 }
+
+// Event listener para cambiar el ícono cuando se hace clic
+document.getElementById('heart-icon-button').addEventListener('click', cambiarIcono);
     </script>
 
 
