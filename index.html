@@ -187,15 +187,6 @@ function cambiarIcono() {
   localStorage.setItem('iconHeartStatus', isIconNew ? 'new-icon' : '');
 }
 
-// Recuperar el estado del ícono desde localStorage al cargar la página
-document.addEventListener('DOMContentLoaded', () => {
-  const iconHeart = document.getElementById('icon-heart');
-  const isIconNew = localStorage.getItem('iconHeartStatus') === 'new-icon';
-  if (isIconNew) {
-    iconHeart.classList.add('new-icon');
-  }
-});
-
 // Verificar el estado del corazón en localStorage al cargar la página
 const iconHeart = document.getElementById('icon-heart');
 const isIconNew = localStorage.getItem('iconHeartStatus') === 'new-icon';
