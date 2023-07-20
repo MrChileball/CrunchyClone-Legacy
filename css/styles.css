@@ -412,6 +412,11 @@ nav {
   opacity: 1;
   transition: opacity 0.4s ease;
 }
+/* Agregar estilos para el ícono de corazón lleno y vacío */
+#icon-heart-filled {
+  display: none;
+}
+
 
 /* Agregar estilos para la animación de cambio de corazón lleno a vacío y viceversa */
 @keyframes fillHeart {

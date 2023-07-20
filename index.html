@@ -186,14 +186,17 @@
       // Función para cambiar el ícono y almacenar el valor en localStorage
 function cambiarIcono() {
   const iconHeart = document.getElementById('icon-heart');
+  const iconHeartFilled = document.getElementById('icon-heart-filled');
   const isIconNew = iconHeart.classList.contains('new-icon');
 
   if (isIconNew) {
     // Cambiar el corazón de lleno a vacío
     iconHeart.classList.remove('new-icon');
+    iconHeartFilled.style.display = 'none';
   } else {
     // Cambiar el corazón de vacío a lleno
     iconHeart.classList.add('new-icon');
+    iconHeartFilled.style.display = 'block';
   }
 
   // Almacenar el estado del corazón en localStorage
@@ -203,14 +206,17 @@ function cambiarIcono() {
 // Recuperar el estado del ícono desde localStorage al cargar la página
 document.addEventListener('DOMContentLoaded', () => {
   const iconHeart = document.getElementById('icon-heart');
+  const iconHeartFilled = document.getElementById('icon-heart-filled');
   const isIconNew = localStorage.getItem('iconHeartStatus') === 'new-icon';
   if (isIconNew) {
     iconHeart.classList.add('new-icon');
+    iconHeartFilled.style.display = 'block';
   }
 });
 
 // Event listener para cambiar el ícono cuando se hace clic
 document.getElementById('heart-icon-button').addEventListener('click', cambiarIcono);
+
     </script>
 
 
