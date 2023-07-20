@@ -376,7 +376,7 @@ nav {
   .current-media-info{
     display: flex;
     flex-direction: column;
-    width: auto;
+    width: 100%;
     max-width: 180rem;
 
   }
