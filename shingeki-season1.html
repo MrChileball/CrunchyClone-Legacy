@@ -50,7 +50,7 @@
 
             </div>
 
-            <h1 id="episode-title" class="">E1 - A ti, 2,000 años en el futuro. La caída de Shiganshina - Primera Parte</h1>
+            <h1 id="episodeTitle" class="">E1 - A ti, 2,000 años en el futuro. La caída de Shiganshina - Primera Parte</h1>
 
             <p class="">Subtitulado</p>
 
@@ -88,15 +88,16 @@
     function cargarEpisodio() {
       const episodeNumber = getQueryParam('ep');
       if (episodeNumber === '1') {
-        document.getElementsByClassName('')
-        document.getElementById('serieTitle')
+        /*document.getElementsByClassName('')*/
+        document.getElementById('serieTitle').textContent= 'Attack on titan'
         document.getElementById('episodeTitle').innerText = 'Episodio 1';
         document.getElementById('episodeDescription').innerText = 'Descripción del Episodio 1';
         document.getElementById('episodeSource').src = 'https://streamwish.to/e/r5ikyog88shf';
       } else if (episodeNumber === '2') {
+        document.getElementById('serieTitle').textContent= 'Attack on titan'
         document.getElementById('episodeTitle').innerText = 'Episodio 2';
         document.getElementById('episodeDescription').innerText = 'Descripción del Episodio 2';
-        document.getElementById('episodeVideo').src = 'https://streamwish.to/e/6eaz0tqakqnm';
+        document.getElementById('episodeSource').src = 'https://streamwish.to/e/6eaz0tqakqnm';
       } else {
         // Si no se proporciona un valor válido para "ep", mostrar un mensaje de error o redirigir a una página por defecto.
         alert('Episodio no válido');
