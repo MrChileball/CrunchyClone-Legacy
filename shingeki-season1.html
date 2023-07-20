@@ -85,27 +85,34 @@
     }
 
     // Función para cargar el contenido del episodio según el valor de "ep"
-    function cargarEpisodio() {
-      const episodeNumber = getQueryParam('ep');
-      if (episodeNumber === '1') {
-        /*document.getElementsByClassName('')*/
-        document.getElementById('serieTitle').textContent= 'Attack on titan'
-        document.getElementById('episodeTitle').innerText = 'Episodio 1';
-        document.getElementById('episodeDescription').innerText = 'Descripción del Episodio 1';
-        document.getElementById('episodeSource').src = 'https://streamwish.to/e/r5ikyog88shf';
-      } else if (episodeNumber === '2') {
-        document.getElementById('serieTitle').textContent= 'Attack on titan'
-        document.getElementById('episodeTitle').innerText = 'Episodio 2';
-        document.getElementById('episodeDescription').innerText = 'Descripción del Episodio 2';
-        document.getElementById('episodeSource').src = 'https://streamwish.to/e/6eaz0tqakqnm';
-      } else {
-        // Si no se proporciona un valor válido para "ep", mostrar un mensaje de error o redirigir a una página por defecto.
-        alert('Episodio no válido');
-      }
+    function cargarEpisodio(episodeNumber) {
+      // Leer el archivo JSON para obtener los datos de los episodios
+      fetch('shingeki-episodes.json')
+        .then(response => response.json())
+        .then(data => {
+          const episodeData = data.episodes[episodeNumber - 1]; // Los episodios comienzan desde 1, pero el array comienza desde 0
+          if (episodeData) {
+            document.getElementById('episodeTitle').innerText = episodeData.title;
+            document.getElementById('episodeDescription').innerText = episodeData.description;
+            document.getElementById('episodeSource').src = episodeData.source;
+          } else {
+            alert('Episodio no válido');
+          }
+        })
+        .catch(error => {
+          console.error('Error al cargar los datos de los episodios:', error);
+        });
     }
 
     // Llamar a la función cargarEpisodio al cargar la página
-    cargarEpisodio();
+    document.addEventListener('DOMContentLoaded', () => {
+      const episodeNumber = getQueryParam('ep');
+      if (episodeNumber) {
+        cargarEpisodio(Number(episodeNumber));
+      } else {
+        alert('Episodio no especificado en la URL');
+      }
+    });
   </script>
 
 
