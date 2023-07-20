@@ -382,7 +382,8 @@ nav {
   .current-media-header{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    align-items: center;
+    
   }
   .current-media-parent-ref{
     display: flex;
