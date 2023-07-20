@@ -397,6 +397,40 @@ nav {
     justify-content: space-around;
   }
   
+  /* Agregar estilos para el ícono de corazón lleno y vacío */
+#icon-heart-filled {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+#icon-heart.new-icon {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+#icon-heart.new-icon ~ #icon-heart-filled {
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+/* Agregar estilos para la animación de cambio de corazón lleno a vacío y viceversa */
+@keyframes fillHeart {
+  0% {
+    fill: none;
+  }
+  100% {
+    fill: currentColor;
+  }
+}
+
+@keyframes unfillHeart {
+  0% {
+    fill: currentColor;
+  }
+  100% {
+    fill: none;
+  }
+}
   
   
   
