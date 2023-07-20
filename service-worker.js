@@ -18,12 +18,16 @@ self.addEventListener('install', event => {
     caches.open('my-cache').then(cache => {
       return cache.addAll([
         '/',
+        '/shingeki-season1.html',
         '/index.html',
         '/css/styles.css',
         '/javascript/module.js',
         '/images/content/favicon.png',
         '/images/',
-      ]);
+      ])
+      .catch(error => {
+        console.error('Error al agregar recursos a la caché:', error);
+      });
     })
   );
 });

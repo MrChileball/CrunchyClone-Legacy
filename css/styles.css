@@ -376,6 +376,7 @@ nav {
   .current-media-info{
     display: flex;
     flex-direction: column;
+    width: 300rem;
 
   }
   .current-media-header{
@@ -391,6 +392,7 @@ nav {
     display:flex;
     flex-direction: row;
     gap: 2rem;
+    justify-content: space-around;
   }
   
   
