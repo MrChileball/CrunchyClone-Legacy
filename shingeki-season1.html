@@ -29,14 +29,14 @@
       
       
       <div class="video-container">
-        <iframe class="video-player" width="560" height="315" frameborder="0" src="https://streamwish.to/e/r5ikyog88shf" scrolling="no" allowfullscreen="">
+        <iframe id="episodeSource" class="video-player" width="560" height="315" frameborder="0" src="https://streamwish.to/e/r5ikyog88shf" scrolling="no" allowfullscreen="">
         </iframe>
       </div>
       <div style=" background-color: #121111;" class="wrapper body-color padding-12 flex-standard">
         <div class="current-media-info">
             <div class="current-media-header ">
               <div class="current-media-parent-ref">
-                <h3>Attack on titan</h3>
+                <h3 id="serieTitle">Attack on titan</h3>
                 <h3>|</h3>
                 <h3>(149.3k)</h3>
               </div>
@@ -50,7 +50,7 @@
 
             </div>
 
-            <h1 class="">E1 - A ti, 2,000 años en el futuro. La caída de Shiganshina - Primera Parte</h1>
+            <h1 id="episode-title" class="">E1 - A ti, 2,000 años en el futuro. La caída de Shiganshina - Primera Parte</h1>
 
             <p class="">Subtitulado</p>
 
@@ -58,7 +58,7 @@
               <h4>Lanzado el 14 de abr. de 2013</h4>
             </div>
 
-            <div class=" ">
+            <div id="episodeDescription" class=" ">
               La humanidad lleva más de un siglo viviendo tras unas murallas inmensas para defenderse de unos extraños seres que amenaza sus vidas. Un día, la paz se verá alterada tras la aparición de un titán cuyo tamaño supera la muralla.
             </div>
         </div>
@@ -77,6 +77,35 @@
   
 
   <div id="footer-container"></div>
+  <script>
+    // Función para obtener el valor del parámetro "ep" en la URL
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+
+    // Función para cargar el contenido del episodio según el valor de "ep"
+    function cargarEpisodio() {
+      const episodeNumber = getQueryParam('ep');
+      if (episodeNumber === '1') {
+        document.getElementsByClassName('')
+        document.getElementById('serieTitle')
+        document.getElementById('episodeTitle').innerText = 'Episodio 1';
+        document.getElementById('episodeDescription').innerText = 'Descripción del Episodio 1';
+        document.getElementById('episodeSource').src = 'https://streamwish.to/e/r5ikyog88shf';
+      } else if (episodeNumber === '2') {
+        document.getElementById('episodeTitle').innerText = 'Episodio 2';
+        document.getElementById('episodeDescription').innerText = 'Descripción del Episodio 2';
+        document.getElementById('episodeVideo').src = 'https://streamwish.to/e/6eaz0tqakqnm';
+      } else {
+        // Si no se proporciona un valor válido para "ep", mostrar un mensaje de error o redirigir a una página por defecto.
+        alert('Episodio no válido');
+      }
+    }
+
+    // Llamar a la función cargarEpisodio al cargar la página
+    cargarEpisodio();
+  </script>
 
 
 </body>
