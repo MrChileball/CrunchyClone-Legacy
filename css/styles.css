@@ -397,46 +397,40 @@ nav {
     justify-content: space-around;
   }
   
-  /* Agregar estilos para el ícono de corazón lleno y vacío */
-
-#icon-heart.new-icon {
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-
-
-
-/* Agregar estilos para el ícono de corazón lleno y vacío */
-#icon-heart-filled {
-  display: none;
-}
-
-#icon-heart.new-icon ~ #icon-heart-filled {
-  display: block;
-  transition: all 0.4s ease;
-}
-
 /* Agregar estilos para la transición de cambio de corazón lleno a vacío y viceversa */
 @keyframes fillHeart {
   0% {
     fill: none;
+    transform: scale(1);
   }
   100% {
     fill: currentColor;
+    transform: scale(0.8);
   }
 }
 
 @keyframes unfillHeart {
   0% {
     fill: currentColor;
+    transform: scale(0.8);
   }
   100% {
     fill: none;
+    transform: scale(1);
   }
 }
 
-  
+#icon-heart {
+  transition: fill 0.4s, transform 0.4s;
+}
+
+#icon-heart.new-icon {
+  animation: fillHeart 0.4s;
+}
+
+#icon-heart:not(.new-icon) {
+  animation: unfillHeart 0.4s;
+}
   
 
   
