@@ -376,7 +376,7 @@ nav {
   .current-media-info{
     display: flex;
     flex-direction: column;
-    width: 300rem;
+    width: 180rem;
 
   }
   .current-media-header{
@@ -526,6 +526,9 @@ nav {
     }
     .video-container{
       padding-top: 45%;
+    }
+    .current-media-info{
+      width: 340rem;
     }
     
     
