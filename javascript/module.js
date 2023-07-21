@@ -16,7 +16,7 @@ function cargarContenido(url, contenedorId) {
       contenedor.innerHTML = data;
     })
     .catch(error => {
-      console.error(`Error al cargar el contenido desde ${url}: ${error}`);
+      console.log(`Error al cargar el contenido desde ${url}: ${error}`);
     });
 }
   
