@@ -483,6 +483,9 @@ nav {
     .video-container{
       padding-top: 85%;
     }
+    .chapter-text{
+      flex-wrap: wrap;
+    }
 }
   @media (min-width:800px){
     .icon-logo-desktop{
