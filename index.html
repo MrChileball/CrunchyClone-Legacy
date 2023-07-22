@@ -6,18 +6,17 @@
     <title>Crunchyroll | Shingeki no Kyojin</title>
     <meta name="description" content="Watch all episodes of Attack on Titan (Shingeki No Kyojin) and enter a world where the last of mankind fight to survive against massive, man-eating titans. ">
     
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Montserrat:wght@300;400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+        <!-- Precarga optimizada de fuentes alojadas en el mismo dominio -->
+    <link rel="preload" href="fonts/lato-black.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/lato-thin.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/lato-regular.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/lato-light.woff2" as="font" type="font/woff2">
     <!--<link rel="icon" type="image/x-icon" href="/images/favicon.ico">-->
     
     
     <script src="/javascript/module.js" type="module" async></script>
     <link rel="manifest" href="/manifest.json">
-    <link rel="stylesheet" href="/css/styles.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <script src="service-worker.js" defer></script>
     <link rel="icon" type="image/png" href="/images/favicon.png" />
     <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />-->
@@ -26,8 +25,9 @@
 </head>
 <body>
 
-    <div id="navbar-container"></div>
-    <div id="main-container"></div>
+        <div id="navbar-container"></div>
+        <div id="main-container">
+        </div>
         <div class="body-color padding-20 wrapper">
             <div class="information-body">
                 <div class="title-line">
@@ -60,7 +60,7 @@
                     
                 </div>
                 <div class="subtitles-line">
-                    <h3>subtitulado</h3>
+                    <h5 style=" margin: 0px; color:rgb(126, 126, 126);">subtitulado</h5>
                 </div>
                 <div class="rating-starts reviews-section">
                 </div>
@@ -69,7 +69,17 @@
                 </div>
             </div>
         </div>
-        
+        <div class="wrapper title-line custom-black">
+          <div class="dropdown">
+            <button class="dropbtn">Temporadas - Shingeki</button>
+            <div class="dropdown-content">
+              <a href="#">Temporada 1</a>
+              <a href="#">Temporada 2</a>
+              <a href="#">Temporada 3</a>
+              <a href="#">Temporada 4</a>
+            </div>
+          </div>
+        </div>
         
 
         <div class="wrapper chapter-container">
@@ -108,7 +118,6 @@
         const notification = document.createElement('div');
         notification.classList.add('notification');
         notification.textContent = message;
-
         // Establecer estilos CSS para la notificación
         notification.style.position = 'fixed';
         notification.style.top = '20px';
@@ -181,28 +190,6 @@
         }
       };
     </script>
-
-    <script>
-     // Función para cambiar el ícono y almacenar el valor en localStorage
-function cambiarIcono() {
-  const iconHeart = document.getElementById('icon-heart');
-  const isIconNew = iconHeart.classList.toggle('new-icon');
-
-  // Almacenar el estado del corazón en localStorage
-  localStorage.setItem('iconHeartStatus', isIconNew ? 'new-icon' : '');
-}
-
-// Verificar el estado del corazón en localStorage al cargar la página
-const iconHeart = document.getElementById('icon-heart');
-const isIconNew = localStorage.getItem('iconHeartStatus') === 'new-icon';
-if (isIconNew) {
-  iconHeart.classList.add('new-icon');
-}
-
-// Event listener para cambiar el ícono cuando se hace clic
-document.getElementById('heart-icon-button').addEventListener('click', cambiarIcono);
-    </script>
-
 
 
 </body>
