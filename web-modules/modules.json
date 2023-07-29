@@ -4,12 +4,12 @@
       "contenedorId": "navbar-container"
     },
     {
-      "url": "/web-modules/footer-container.html",
-      "contenedorId": "footer-container"
+      "url": "/web-modules/main-container.html",
+      "contenedorId": "main-container"
     },
     {
-        "url": "/web-modules/main-container.html",
-        "contenedorId": "main-container"
+      "url": "/web-modules/footer-container.html",
+      "contenedorId": "footer-container"
     },
     {
       "url": "/web-modules/chapter-module.html",
