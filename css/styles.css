@@ -71,6 +71,7 @@ p{
   padding-right: 15%;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 
@@ -485,9 +486,7 @@ nav {
 
         min-height: 38em;
     }
-    .chapter-item > picture{
-      max-width: 25rem;
-    }
+    
     
     .chapter-item{
       display:flex;
@@ -525,7 +524,7 @@ nav {
       padding-bottom: 2.5rem;
       padding-left: 3%;
       padding-right: 3%;
-    }    
+    } 
     
 }
 
@@ -533,6 +532,13 @@ nav {
   .chapter-text{
     flex-wrap: wrap;
   }
+  .chapter-item > picture {
+    width: auto;
+    height: 100%;
+    max-width: 35rem;
+}
+  
+
 }
   @media (min-width:800px){
     .icon-logo-desktop{
@@ -609,7 +615,7 @@ nav {
       gap: 9rem;
     }
     .chapter-item > picture{
-      max-width: 75rem;
+      max-width: 70rem;
     }
     .button{
       font-size: 3rem;
