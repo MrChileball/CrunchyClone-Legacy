@@ -106,9 +106,9 @@ p{
   padding-left: 20%;
   padding-right: 20%;
 }
-.padding-12{
-  padding-left: 12%;
-  padding-right: 12%;
+.padding-10{
+  padding-left: 10%;
+  padding-right: 10%;
 }
 .min-height-20em{
   min-height: 20em;
@@ -124,6 +124,7 @@ p{
 }
 .flex{
   display: flex;
+  align-items: center;
 }
 .custom-black{
   background-color: var(--custom-black);
@@ -150,11 +151,14 @@ p{
   letter-spacing: 0.5px;
   cursor: pointer;
   transition: all 0.2s ease;
+
 }
 .button:hover{
   background-color: var(--custom-tangerine);
-  padding: 4px 8px;
+  transform: translateY(-5px);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 }
+
 .icon{
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -167,6 +171,7 @@ p{
 .icon:hover {
   filter: invert(0.5) grayscale(100%) brightness(1);;
   transition: all 0.3s ease;
+  transform: translateY(-5px);
 }
 
 .icon-logo-mobile{
@@ -290,8 +295,10 @@ nav {
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    gap: 2px;
+    gap: 2.5%;
     text-align: justify;
+    
+    
   }
 
   .footer-container {
@@ -408,6 +415,7 @@ nav {
     flex-direction: column;
     width: 100%;
     max-width: 180rem;
+    
 
   }
   .current-media-header{
@@ -526,6 +534,10 @@ nav {
       padding-right: 3%;
     } 
     
+    .padding-10{
+      padding-left: 3%;
+      padding-right: 3%;
+    }
 }
 
 @media (min-width: 10px) and (max-width: 1024px){

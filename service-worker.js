@@ -24,6 +24,7 @@ self.addEventListener('install', event => {
         '/javascript/module.js',
         '/images/content/favicon.png',
         '/images/',
+        '/images/content/shingeki',
       ])
       .catch(error => {
         console.error('Error al agregar recursos a la caché:', error);
