@@ -1,22 +1,22 @@
 [
     {
-      "url": "/web-modules/nav-container.html",
+      "url": "/web-modules/nav-container",
       "contenedorId": "navbar-container"
     },
     {
-      "url": "/web-modules/main-container.html",
+      "url": "/web-modules/main-container",
       "contenedorId": "main-container"
     },
     {
-      "url": "/web-modules/footer-container.html",
+      "url": "/web-modules/footer-container",
       "contenedorId": "footer-container"
     },
     {
-      "url": "/web-modules/chapter-module.html",
+      "url": "/web-modules/chapter-module",
       "contenedorId": "chapter-module"
     },
     {
-      "url": "/web-modules/comment-section.html",
+      "url": "/web-modules/comment-section",
       "contenedorId": "comment-section"
     }
   ]
