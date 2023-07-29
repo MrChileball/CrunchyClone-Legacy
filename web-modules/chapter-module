@@ -9,7 +9,7 @@
                     <p>Attack on titan - S1</p>
                     <div class="chapter-text">
                         <h4 class="custom-padding">E1 - A ti, 2,000 años en el futuro. La caída de Shiganshina - Primera Parte</h4>
-                        <button id="loadContentButton" onclick="window.location.href = 'shingeki-season1.html?ep=1'" class="chapter-text button">
+                        <button  onclick="window.location.href = 'shingeki-season1.html?ep=1'" class="chapter-text button">
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon-tabler icon-tabler-player-play" width="32" height="32" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                 <path d="M7 4v16l13 -8z"></path>
@@ -51,7 +51,7 @@
                     <p>Attack on titan - S1</p>
                     <div class="chapter-text">
                         <h4 class="custom-padding">E3 - Una tenue luz en la desesperación. La humanidad se levanta de nuevo - Primera Parte</h4>
-                        <button id="loadContentButton" onclick="window.location.href = 'shingeki-season1.html?ep=3'" class="chapter-text button">
+                        <button  onclick="window.location.href = 'shingeki-season1.html?ep=3'" class="chapter-text button">
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon-tabler icon-tabler-player-play" width="32" height="32" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                 <path d="M7 4v16l13 -8z"></path>
@@ -70,7 +70,7 @@
                     <p>Attack on titan - S1</p>
                     <div class="chapter-text">
                         <h4 class="custom-padding">E4 - La noche de la ceremonia de graduación. La humanidad se levanta de nuevo - Segunda Parte</h4>
-                        <button id="loadContentButton" onclick="window.location.href = 'shingeki-season1.html?ep=4'" class="chapter-text button">
+                        <button  onclick="window.location.href = 'shingeki-season1.html?ep=4'" class="chapter-text button">
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon-tabler icon-tabler-player-play" width="32" height="32" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                 <path d="M7 4v16l13 -8z"></path>
@@ -89,7 +89,7 @@
                     <p>Attack on titan - S1</p>
                     <div class="chapter-text">
                         <h4 class="custom-padding">E5 - Primera batalla. La batalla de Trost - Primera Parte</h4>
-                        <button id="loadContentButton" onclick="window.location.href = 'shingeki-season1.html?ep=5'" class="chapter-text button">
+                        <button  onclick="window.location.href = 'shingeki-season1.html?ep=5'" class="chapter-text button">
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon-tabler icon-tabler-player-play" width="32" height="32" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                 <path d="M7 4v16l13 -8z"></path>
@@ -103,13 +103,13 @@
             <div class="chapter-item">
                 <picture>
                     <source srcset="" type="image/webp">
-                    <img class="preview-banner" loading="lazy" src="https://www.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/0b9d827f813bd0f5b934721b7cce37d3.jpe" loading="lazy" data-t="card-image">
+                    <img class="preview-banner" loading="lazy" src="https://www.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/0b9d827f813bd0f5b934721b7cce37d3.jpe" alt="E6 - El mundo a los ojos de la chica. La batalla de Trost - Segunda Parte" loading="lazy" data-t="card-image">
                 </picture>
                 <div style="width: 100%;">
                     <p>Attack on titan - S1</p>
                     <div class="chapter-text">
                         <h4 class="custom-padding">E6 - El mundo a los ojos de la chica. La batalla de Trost - Segunda Parte</h4>
-                        <button id="loadContentButton" onclick="window.location.href = 'shingeki-season1.html?ep=6'" class="chapter-text button">
+                        <button  onclick="window.location.href = 'shingeki-season1.html?ep=6'" class="chapter-text button">
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon-tabler icon-tabler-player-play" width="32" height="32" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                 <path d="M7 4v16l13 -8z"></path>

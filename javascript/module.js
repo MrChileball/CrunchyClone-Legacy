@@ -14,6 +14,8 @@ function cargarContenido(url, contenedorId) {
     .then(response => response.text())
     .then(data => {
       contenedor.innerHTML = data;
+      
+      
     })
     .catch(error => {
       console.log(`Error al cargar el contenido desde ${url}: ${error}`);
@@ -31,8 +33,21 @@ fetch("/web-modules/modules.json")
       )
     ).then(() => {
       console.log("Todos los elementos se han cargado correctamente.");
+      onPageLoaded();
+      
+      
+
+      
     });
   })
   .catch(error => {
     console.error(`Error al cargar los elementos: ${error}`);
   });
+
+
+  function onPageLoaded() {
+    // Cambiar la propiedad CSS del body una vez que todo esté cargado
+    document.body.style.display = "block";
+    document.body.classList.add("loaded");
+    console.log("Todos los elementos se han cargado correctamente.");
+  }
