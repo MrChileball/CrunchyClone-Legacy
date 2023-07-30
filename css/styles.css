@@ -276,8 +276,9 @@ nav {
     max-width: 35rem;
   }
   .chapter-item:hover .preview-banner{ 
-    transition: all var(--custom-transition-03s) ease;
+    transition:all var(--custom-transition-04s) ease;
     filter: brightness(1);
+    scale: 110%;
    }
   .chapter-item:hover .button{
     transition: all var(--custom-transition-03s) ease;
