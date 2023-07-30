@@ -91,7 +91,7 @@ p{
     padding-right: 20%;
     background-color: #070707;
 }
-#main-container, #main-containerSNK{
+#main-container, #main-containerSNK, #main-containerSNK2, #main-containerSNK3, #main-containerSNK4{
   display: flex;
   justify-content: center;
   align-items: center;

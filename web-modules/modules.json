@@ -8,6 +8,18 @@
       "contenedorId": "main-containerSNK"
     },
     {
+      "url": "/series/snk/main-container2",
+      "contenedorId": "main-containerSNK2"
+    },
+    {
+      "url": "/series/snk/main-container3",
+      "contenedorId": "main-containerSNK3"
+    },
+    {
+      "url": "/series/snk/main-container4",
+      "contenedorId": "main-containerSNK4"
+    },
+    {
       "url": "/web-modules/main-container",
       "contenedorId": "main-container"
     },
