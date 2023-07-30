@@ -95,7 +95,7 @@ p{
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 20em;
+  min-height: 17em;
   min-width: 100%;
   background-color: #070707;
 
@@ -493,7 +493,7 @@ nav {
         justify-content: center;
     }
     
-    #main-container{
+    #main-container, #main-containerSNK, #main-containerSNK2, #main-containerSNK3, #main-containerSNK4{
 
         min-height: 38em;
     }
@@ -574,6 +574,11 @@ nav {
 
 }
   @media (min-width: 2160px) {
+    .main-container{
+      max-width: 60%;
+      min-width: 60%;
+      padding: 0%;
+    }
     #main-container{
       display: block;
     }
