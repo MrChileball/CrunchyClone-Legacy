@@ -253,7 +253,8 @@ nav {
   .chapter-list {
     display: flex;
     flex-direction: column;
-    gap: 1%;
+    margin: 2%;
+    gap: 2%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     align-content: center;
