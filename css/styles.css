@@ -255,7 +255,7 @@ nav {
     flex-direction: column;
     gap: 1%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     align-content: center;
     align-items: start;
     justify-content: center;
