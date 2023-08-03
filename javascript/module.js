@@ -47,7 +47,7 @@ fetch("/web-modules/modules.json")
 
   function onPageLoaded() {
     // Cambiar la propiedad CSS del body una vez que todo esté cargado
-    document.body.style.display = "block";
+    //document.body.style.display = "block";
     document.body.classList.add("loaded");
     console.log("Todos los elementos se han cargado correctamente.");
   }
