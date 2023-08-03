@@ -83,7 +83,7 @@
     // Función para cargar el contenido del episodio según el valor de "ep"
     function cargarEpisodio(episodeNumber) {
       // Leer el archivo JSON para obtener los datos de los episodios
-      fetch('shingeki-episodes.json')
+      fetch('/series/snk/shingeki-episodes.json')
         .then(response => response.json())
         .then(data => {
           const episodeData = data.episodes[episodeNumber - 1]; // Los episodios comienzan desde 1, pero el array comienza desde 0
