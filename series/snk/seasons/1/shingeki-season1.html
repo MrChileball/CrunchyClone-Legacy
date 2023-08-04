@@ -58,10 +58,16 @@
             <div id="episodeDescription" class=" ">
               La humanidad lleva más de un siglo viviendo tras unas murallas inmensas para defenderse de unos extraños seres que amenaza sus vidas. Un día, la paz se verá alterada tras la aparición de un titán cuyo tamaño supera la muralla.
             </div>
+
+            
         </div>
 
       
-        
+        <div>
+          <h4>Siguiente episodio:</h4>
+          <div id="nextEpisodeTitle"></div>
+          <img id="nextEpisodeImage" ></img>
+        </div>
       </div>
 
     </div>
@@ -87,7 +93,7 @@
         .then(response => response.json())
         .then(data => {
           const episodeData = data.episodes[episodeNumber - 1]; // Los episodios comienzan desde 1, pero el array comienza desde 0
-          const nextEpisodeData = data.episodeData[episodeNumber];
+          const dataNext = data.episodes[episodeNumber];
           if (episodeData) {
             document.getElementById('episodeTitle').innerText = episodeData.title;
             document.getElementById('episodeDescription').innerText = episodeData.description;
@@ -95,9 +101,16 @@
           } else {
             alert('Episodio no válido');
           }
-          if(nextEpisodeData){
-            document.getElementById('nextEpisodeTitle').innerText = episodeData.nextEpisodeTitle;
-            document.getElementById('nextEpisodeimage').src = episodeData.nextEpisodeImage;
+          if(dataNext){
+            
+            document.getElementById('nextEpisodeTitle').innerText = dataNext.title;
+            if (episodeData.image) {
+              document.getElementById('nextEpisodeImage').src = dataNext.image;
+            } else {
+              document.getElementById('nextEpisodeImage').style.display = 'none'; // Oculta la imagen si no hay una URL de imagen
+            }
+          } else {
+            console.alert('VIDEOPLAYER| Episodio no existente');
           }
         })
         .catch(error => {

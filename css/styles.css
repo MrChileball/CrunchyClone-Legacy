@@ -209,7 +209,7 @@ p{
 .icon{
     padding-top: 1rem;
     padding-bottom: 1rem;
-    width: clamp(1em, 1em + 1.2vw, 2.7em);
+    width: clamp(1em, 1em + 2vw, 2.7em);
     height: auto;
     transition: all var(--custom-transition-03s) ease;  
 }
@@ -228,7 +228,7 @@ p{
 .icon-logo-desktop{
     padding-top: 1.11rem;
     padding-bottom: 1.11rem;
-    width: clamp(4em, 6em + 1.5vw, 10em);
+    width: clamp(4em, 9em + 1.6vw, 12em);
     height: auto;
     display: none;
     transition: all var(--custom-transition-03s) ease;
@@ -584,6 +584,8 @@ nav {
         display: flex;
         height: 100%;
         max-height: 25rem;
+        position: relative;
+        top: 0.5em;
     }
     .left-icons {
       display: flex;
@@ -675,7 +677,7 @@ nav {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 0.95em;
 }
 
 /* Track */
