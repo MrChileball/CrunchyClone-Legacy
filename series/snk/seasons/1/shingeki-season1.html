@@ -87,12 +87,17 @@
         .then(response => response.json())
         .then(data => {
           const episodeData = data.episodes[episodeNumber - 1]; // Los episodios comienzan desde 1, pero el array comienza desde 0
+          const nextEpisodeData = data.episodeData[episodeNumber];
           if (episodeData) {
             document.getElementById('episodeTitle').innerText = episodeData.title;
             document.getElementById('episodeDescription').innerText = episodeData.description;
             document.getElementById('episodeSource').src = episodeData.source;
           } else {
             alert('Episodio no válido');
+          }
+          if(nextEpisodeData){
+            document.getElementById('nextEpisodeTitle').innerText = episodeData.nextEpisodeTitle;
+            document.getElementById('nextEpisodeimage').src = episodeData.nextEpisodeImage;
           }
         })
         .catch(error => {

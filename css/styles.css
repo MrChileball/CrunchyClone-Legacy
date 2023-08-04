@@ -91,14 +91,7 @@ a {
 p{
     font-weight: 300;
 }
-nav {
-  background-color: var(--custom-black);
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  
-}
+
 /*--------------------- PADDINGS ---------------------*/
 .padding-20{
   padding-left: 20%;
@@ -216,7 +209,7 @@ nav {
 .icon{
     padding-top: 1rem;
     padding-bottom: 1rem;
-    width: 2.77rem;
+    width: clamp(1em, 1em + 1.2vw, 2.7em);
     height: auto;
     transition: all var(--custom-transition-03s) ease;  
 }
@@ -228,14 +221,14 @@ nav {
 .icon-logo-mobile{
     padding-top: 1.11rem;
     padding-bottom: 1.11rem;
-    width: 3.22rem;
+    width: clamp(1em, 1em + 2vw, 4em);
     height: auto;
     transition: all 0.7s ease;
 }
 .icon-logo-desktop{
     padding-top: 1.11rem;
     padding-bottom: 1.11rem;
-    width: 9em;
+    width: clamp(4em, 6em + 1.5vw, 10em);
     height: auto;
     display: none;
     transition: all var(--custom-transition-03s) ease;
@@ -250,13 +243,21 @@ nav {
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
-    height: 100%;
+    min-height: clamp(1em, 2em + 2vw, 4em);
     z-index: 100;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: var(--custom-rich-black);
+}
+nav {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
 }
 .nav-container{
     height: 100%;
 }
-
 .left-icons {
     display: flex;
     align-items: center;
@@ -669,4 +670,26 @@ nav {
     flex-direction: row;
   }
 
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #303030; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 1em
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--custom-white); 
 }
