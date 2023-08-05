@@ -11,6 +11,7 @@
     --custom-oxford-blue: rgb(49, 49, 49);
     --custom-black: #212121;
     --custom-rich-black: #161515;
+    --custom-darkest-dark: #070707;
 
     --titulo: 1rem;
 
@@ -680,21 +681,26 @@ nav {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 0.95em;
+  width: auto;
 }
+
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #303030; 
+  background: var(--custom-black); 
+  
 }
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888; 
-  border-radius: 1em
+  background: #535353; 
+  border-radius: 0.4em;
+  transition: all 0.3s ease;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--custom-white); 
+  transition: all 0.3s ease;
+  margin: 2%;
+  background: #bdbdbd; 
 }
