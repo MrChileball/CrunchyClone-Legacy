@@ -209,7 +209,7 @@ p{
 .icon{
     padding-top: 1rem;
     padding-bottom: 1rem;
-    width: clamp(1.5em, 1em + 1.2vw, 2.7em);
+    width: clamp(1.7em, 1em + 1.2vw, 2.7em);
     height: auto;
     transition: all var(--custom-transition-03s) ease;  
 }
@@ -417,7 +417,7 @@ nav {
     flex-basis: 100%;
     text-align: center;
   }
-
+/*------------------- REPRODUCTOR DE EPISODIOS ---------------------*/
   .video-container {
     display: flex;
     justify-content: center;

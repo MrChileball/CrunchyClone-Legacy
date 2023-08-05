@@ -6,7 +6,7 @@
 function cargarContenido(url, contenedorId) {
   const contenedor = document.getElementById(contenedorId);
   if (!contenedor) {
-    console.error(`El contenedor con el ID '${contenedorId}' no se encontró en la página.`);
+    console.log(`El contenedor con el ID '${contenedorId}' no se encontró en la página.`);
     return;
   }
 
