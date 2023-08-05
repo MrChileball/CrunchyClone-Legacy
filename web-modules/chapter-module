@@ -3,7 +3,7 @@
             <div class="chapter-item">
                 <picture>
                     <source srcset="" type="image/webp">
-                    <img class="preview-banner" loading="lazy"  src="/series/snk/seasons/1/thumbnails/episode1.webp" alt="A ti, 2,000 años en el futuro. La caída de Shiganshina - Primera Parte" loading="lazy" data-t="card-image">
+                    <img class="b-lazy preview-banner" loading="lazy"  src="/series/snk/seasons/1/thumbnails/episode1.webp" alt="A ti, 2,000 años en el futuro. La caída de Shiganshina - Primera Parte" loading="lazy" data-t="card-image">
                 </picture>
                 <div style="width: 100%;">
                     <p>Attack on titan - S1</p>
@@ -24,7 +24,7 @@
             </div>
             <div class="chapter-item">
                 <picture>
-                    <source srcset="" type="image/webp"><img class="preview-banner" loading="lazy" src="/series/snk/seasons/1/thumbnails/episode2.webp" alt="Ese día. La caída de Shiganshina - Segunda Parte" loading="lazy" data-t="card-image">
+                    <source srcset="" type="image/webp"><img class="b-lazy preview-banner" loading="lazy" src="/series/snk/seasons/1/thumbnails/episode2.webp" alt="Ese día. La caída de Shiganshina - Segunda Parte" loading="lazy" data-t="card-image">
                 </picture>
                 <div style="width: 100%;">
                     <p>Attack on titan - S1</p>
@@ -45,7 +45,7 @@
             <div class="chapter-item">
                 <picture>
                     <source srcset="" type="image/webp">
-                    <img class="preview-banner" src="/series/snk/seasons/1/thumbnails/episode3.webp" alt="Una tenue luz en la desesperación. La humanidad se levanta de nuevo - Primera Parte" loading="lazy" data-t="card-image">
+                    <img class="b-lazy preview-banner" src="/series/snk/seasons/1/thumbnails/episode3.webp" alt="Una tenue luz en la desesperación. La humanidad se levanta de nuevo - Primera Parte" loading="lazy" data-t="card-image">
                 </picture>
                 <div style="width: 100%;">
                     <p>Attack on titan - S1</p>
@@ -64,7 +64,7 @@
             <div class="chapter-item">
                 <picture>
                     <source srcset="" type="image/webp">
-                    <img class="preview-banner" loading="lazy" src="/series/snk/seasons/1/thumbnails/episode4.jpg" alt="La noche de la ceremonia de graduación. La humanidad se levanta de nuevo - Segunda Parte" loading="lazy" data-t="card-image">
+                    <img class="b-lazy preview-banner" loading="lazy" src="/series/snk/seasons/1/thumbnails/episode4.jpg" alt="La noche de la ceremonia de graduación. La humanidad se levanta de nuevo - Segunda Parte" loading="lazy" data-t="card-image">
                 </picture>
                 <div style="width: 100%;">
                     <p>Attack on titan - S1</p>
@@ -83,7 +83,7 @@
             <div class="chapter-item">
                 <picture>
                     <source srcset="" type="image/webp">
-                    <img class="preview-banner" loading="lazy" src="/series/snk/seasons/1/thumbnails/episode5.webp" alt="Primera batalla. La batalla de Trost - Primera Parte" loading="lazy" data-t="card-image">
+                    <img class="b-lazy preview-banner" loading="lazy" src="/series/snk/seasons/1/thumbnails/episode5.webp" alt="Primera batalla. La batalla de Trost - Primera Parte" loading="lazy" data-t="card-image">
                 </picture>
                 <div style="width: 100%;">
                     <p>Attack on titan - S1</p>
@@ -103,7 +103,7 @@
             <div class="chapter-item">
                 <picture>
                     <source srcset="" type="image/webp">
-                    <img class="preview-banner" loading="lazy" src="/series/snk/seasons/1/thumbnails/episode6.webp" alt="E6 - El mundo a los ojos de la chica. La batalla de Trost - Segunda Parte" loading="lazy" data-t="card-image">
+                    <img class="b-lazy preview-banner" loading="lazy" src="/series/snk/seasons/1/thumbnails/episode6.webp" alt="E6 - El mundo a los ojos de la chica. La batalla de Trost - Segunda Parte" loading="lazy" data-t="card-image">
                 </picture>
                 <div style="width: 100%;">
                     <p>Attack on titan - S1</p>
@@ -123,7 +123,7 @@
             <div class="chapter-item">
                 <picture>
                     <source srcset="" type="image/webp">
-                    <img class="preview-banner" loading="lazy" src="/series/snk/seasons/1/thumbnails/episode7.webp" alt="episodio 7" loading="lazy" data-t="card-image">
+                    <img class="b-lazy preview-banner" loading="lazy" src="/series/snk/seasons/1/thumbnails/episode7.webp" alt="episodio 7" loading="lazy" data-t="card-image">
                 </picture>
                 <div style="width: 100%;">
                     <p>Attack on titan - S1</p>
@@ -143,7 +143,7 @@
             <div class="chapter-item">
                 <picture>
                     <source srcset="" type="image/webp">
-                    <img class="preview-banner" loading="lazy" src="/series/snk/seasons/1/thumbnails/episode8.webp" alt="episodio 8" loading="lazy" data-t="card-image">
+                    <img class="b-lazy preview-banner" loading="lazy" src="/series/snk/seasons/1/thumbnails/episode8.webp" alt="episodio 8" loading="lazy" data-t="card-image">
                 </picture>
                 <div style="width: 100%;">
                     <p>Attack on titan - S1</p>
@@ -163,7 +163,7 @@
             <div class="chapter-item">
                 <picture>
                     <source srcset="" type="image/webp">
-                    <img class="preview-banner" loading="lazy" src="/series/snk/seasons/1/thumbnails/episode9.webp" alt="episodio 9" loading="lazy" data-t="card-image">
+                    <img class="b-lazy preview-banner" loading="lazy" src="/series/snk/seasons/1/thumbnails/episode9.webp" alt="episodio 9" loading="lazy" data-t="card-image">
                 </picture>
                 <div style="width: 100%;">
                     <p>Attack on titan - S1</p>

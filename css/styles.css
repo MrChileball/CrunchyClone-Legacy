@@ -168,17 +168,22 @@ p{
 }
 
 .main-container{
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: clamp(11%, 16%, 20%);
+    height: 100%;
+    padding-right: clamp(11%, 16%, 20%);
     background-color: #070707;
+    width: 100%;
 }
 #main-container, #main-containerSNK, #main-containerSNK2, #main-containerSNK3, #main-containerSNK4{
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 17em;
+  min-height: clamp(13rem, 40vw, 60rem);
+  height: 100%;
+  min-width: 100%;
   min-width: 100%;
   background-color: #070707;
+  
 
 }
 
@@ -464,7 +469,7 @@ nav {
     }
     
     #main-container, #main-containerSNK, #main-containerSNK2, #main-containerSNK3, #main-containerSNK4{
-        min-height: 38em;
+      min-height: clamp(25em, 40em + 2vw, 55em);
     }
     .chapter-item{
       display:flex;
