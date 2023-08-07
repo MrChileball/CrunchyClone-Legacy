@@ -477,7 +477,7 @@ nav {
   }
 
   .next-episode{
-    width: max(450px , 20%);
+    height: min(280px , 20%);
     display: flex;
     flex-direction: column;
     align-content: center;
