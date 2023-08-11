@@ -75,6 +75,3 @@ const copyURL = async () => {
     console.error('Error al copiar el enlace: ', error);
   }
 };
-
-
-
