@@ -9,19 +9,15 @@ function cargarContenido(url, contenedorId) {
     console.log(`El contenedor con el ID '${contenedorId}' no se encontró en la página.`);
     return;
   }
-
   fetch(url)
     .then(response => response.text())
     .then(data => {
-      contenedor.innerHTML = data;
-      
-      
+      contenedor.innerHTML = data;      
     })
     .catch(error => {
       console.log(`Error al cargar el contenido desde ${url}: ${error}`);
     });
 }
-  
 // Carga los elementos desde un archivo externo (elementos.json)
 fetch("/web-modules/modules.json")
   .then(response => response.json())
@@ -34,17 +30,11 @@ fetch("/web-modules/modules.json")
     ).then(() => {
       console.log("Todos los elementos se han cargado correctamente.");
       onPageLoaded();
-      
-      
-
-      
     });
   })
   .catch(error => {
     console.error(`Error al cargar los elementos: ${error}`);
   });
-
-
   function onPageLoaded() {
     // Cambiar la propiedad CSS del body una vez que todo esté cargado
     //document.body.style.display = "block";
