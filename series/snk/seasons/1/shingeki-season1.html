@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Crunchyroll | Shingeki no Kyojin</title>
     <meta name="description" content="Watch all episodes of Attack on Titan (Shingeki No Kyojin) and enter a world where the last of mankind fight to survive against massive, man-eating titans. ">
-    
+    <script type="module" defer src="/loader.js"></script>
+    <script type="module" defer src="/javascript/previousNext.js"></script>
     <!-- TODAS LAS FUENTES SE CARGAN EN STYLES.CSS -->
 
 
     
-    <script src="/javascript/module.js" type="module" async></script>
     <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" href="/css/styles.css">
-    <script src="service-worker.js" defer></script>
+
     <link rel="icon" type="image/png" href="/images/favicon.png" />
     <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />-->
 
@@ -38,13 +38,6 @@
                 <h3>|</h3>
                 <h3>(149.3k)</h3>
               </div>
-              <a>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
-                  <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6"></path>
-                </svg>
-              </a>
               <a aria-label="share button" id="share-link-button">
                 <svg id="icon-share" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-share" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -73,12 +66,26 @@
             
         </div>
 
-      
-        <div class="next-episode">
+      <!--
+<div class="next-episode">
           <h4>Siguiente episodio:</h4>
-          <div id="nextEpisodeTitle"></div>
-          <img id="nextEpisodeImage" ></img>
+          <div class="flex gap-4vw">
+            <img id="nextEpisodeImage"></img>
+            <div class="containerNext">
+              <div id="nextEpisodeTitle"></div>
+            </div>
+
+            
+          </div>
+          
         </div>
+      -->
+        
+        
+
+    
+
+
       </div>
 
     </div>
@@ -90,57 +97,9 @@
 
   <div id="footer-container"></div>
 
-  <script>
-    // Función para obtener el valor del parámetro "ep" en la URL
-    function getQueryParam(param) {
-      const urlParams = new URLSearchParams(window.location.search);
-      return urlParams.get(param);
-    }
+  
 
-    // Función para cargar el contenido del episodio según el valor de "ep"
-    function cargarEpisodio(episodeNumber) {
-      // Leer el archivo JSON para obtener los datos de los episodios
-      fetch('/series/snk/shingeki-episodes.json')
-        .then(response => response.json())
-        .then(data => {
-          const episodeData = data.episodes[episodeNumber - 1]; // Los episodios comienzan desde 1, pero el array comienza desde 0
-          const dataNext = data.episodes[episodeNumber];
-          if (episodeData) {
-            document.getElementById('episodeTitle').innerText = episodeData.title;
-            document.getElementById('episodeDescription').innerText = episodeData.description;
-            document.getElementById('episodeSource').src = episodeData.source;
-          } else {
-            alert('Episodio no válido');
-          }
-          if(dataNext){
-            
-            document.getElementById('nextEpisodeTitle').innerText = dataNext.title;
-            if (episodeData.image) {
-              document.getElementById('nextEpisodeImage').src = dataNext.image;
-            } else {
-              document.getElementById('nextEpisodeImage').style.display = 'none'; // Oculta la imagen si no hay una URL de imagen
-            }
-          } else {
-            console.alert('VIDEOPLAYER| Episodio no existente');
-          }
-        })
-        .catch(error => {
-          console.error('Error al cargar los datos de los episodios:', error);
-        });
-    }
-
-    // Llamar a la función cargarEpisodio al cargar la página
-    document.addEventListener('DOMContentLoaded', () => {
-      const episodeNumber = getQueryParam('ep');
-      if (episodeNumber) {
-        cargarEpisodio(Number(episodeNumber));
-      } else {
-        alert('Episodio no especificado en la URL');
-      }
-    });
-  </script>
-
-  <script defer type="module" src="/javascript/clipboard.js"></script>
+  
 
  
 

@@ -23,6 +23,9 @@
 
     --custom-margin-2020: 2% 0% 2% 0%;
 
+    --ease-slider: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-timeline: cubic-bezier(0.71, 0.21, 0.3, 0.95);
+
 }
 /* devanagari */
 @font-face {
@@ -63,12 +66,39 @@ html{
     background-color: var(--custom-black);
     color: var(--custom-white);
     font-family: 'Lato', sans-serif;
+    ;
+    
 }
 body{
+    visibility: hidden; /*display: none; */
     font-size: 16px; /*1rem = 10px*/
     margin: 0px;
     height: 100%;   
-    /*display: none; */
+}
+@keyframes fadeInNonlinear {
+  0% {
+      opacity: 0;
+  }
+  30% {
+      opacity: 0.1;
+  }
+  40% {
+      opacity: 0.48;
+  }
+  65% {
+      opacity: 0.75;
+  }
+  75% {
+      opacity: 0.85;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+.fade-in-nonlinear {
+  opacity: 0;
+  animation: fadeInNonlinear 0.4s ease forwards;
 }
 h1{
     font-weight: 700;
@@ -97,6 +127,12 @@ p{
 }
 
 /*--------------------- PADDINGS ---------------------*/
+.nopadding{
+  margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
 .padding-20{
   padding-left: 20%;
   padding-right: 20%;
@@ -131,6 +167,10 @@ p{
 
 .margin-2-0-2-0 {
   margin: var(--custom-margin-2020);
+}
+
+.gap-4vw{
+  gap: 4vw;
 }
 /*--------------------- FLEXS BASE --------------------- */
 .flex-wrapOn{
@@ -262,18 +302,17 @@ p{
     top: 0;
     min-height: clamp(1em, 2em + 2vw, 4em);
     z-index: 100;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 3px 40px;
     background-color: var(--custom-rich-black);
+    
 }
-nav {
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  
-}
+
 .nav-container{
     height: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .left-icons {
     display: flex;
@@ -484,6 +523,53 @@ nav {
     align-items: stretch;
     justify-content: space-around;
   }
+  .containerNext{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+
+
+/*  CSS HEADER SERIES WITH BLURRED BACKGROUND */
+  .test-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    
+  }  
+  .test-content {
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(20px) ;
+    width: clamp(30%, 60% + 1vh, 80%);
+    box-shadow: 0 0.3px 0.7px rgba(0, 0, 0, 0.126), 0 0.9px 1.7px rgba(0, 0, 0, 0.179), 0 1.8px 3.5px rgba(0, 0, 0, 0.224), 0 3.7px 7.3px rgba(0, 0, 0, 0.277), 0 10px 20px rgba(0, 0, 0, 0.4);
+    transition: 0.5s ease;
+  }
+
+.key-art {
+  display: flex;
+  position: relative;
+  width: 100%;
+  min-height: auto;
+}
+
+.key-art::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: url(/series/snk/content/banner-desktop.webp);
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(3%)  opacity(5%);
+}
+
+
   /* AJUSTES PARA PANTALLAS DE BAJA O ALTA RESOLUCIÓN */
   @media (max-width: 768px){
     .main-container{
@@ -588,11 +674,6 @@ nav {
     .dropdown-content a{
       font-size: 3rem;
       padding: 3.5rem 5rem;
-    }
-    html{
-        font-size: 62.5%; /*1rem = 10px*/
-        background-color: var(--custom-carmine);
-        color: var(--custom-white);
     }
     body{
         font-size: 42px; /*1rem = 10px*/

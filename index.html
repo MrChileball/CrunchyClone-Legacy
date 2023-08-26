@@ -5,26 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Crunchyroll | Shingeki no Kyojin</title>
     <meta name="description" content="Watch all episodes of Attack on Titan (Shingeki No Kyojin) and enter a world where the last of mankind fight to survive against massive, man-eating titans. ">
-    <script src="/javascript/module.js" type="module" defer></script>
     <link rel="preload" as="image" href="/series/snk/content/banner-mobile.webp" />
     
     <!-- TODAS LAS FUENTES SE CARGAN EN STYLES.CSS -->
 
     <!--<link rel="icon" type="image/x-icon" href="/images/favicon.ico">-->
     
-    
+    <script type="module" defer src="/loader.js"></script>
     
     <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" href="/css/styles.css">
-    <script src="service-worker.js" defer></script>
     <link rel="icon" type="image/png" href="/images/favicon.png" />
+    
   
 
 </head>
 <body>
 
         <div id="navbar-container"></div>
-        <div id="main-containerSNK">
+
+        <div class="key-art">
+          
+          <div class="test-background ">
+            
+            <div class="test-content ">
+              <picture>
+                <source srcset="" type="image/webp">
+                <img class="banner-desktop image-container" src="/series/snk/content/banner-desktop.webp" width="640" height="360" alt="Fondo de la serie">
+              </picture>
+              <picture>
+                <source srcset="" type="image/webp">
+                <img class="banner-mobile image-container" src="/series/snk/content/banner-mobile.webp" width="640" height="360" alt="Fondo de la serie">
+              </picture>
+            </div>
+            
+          </div>
+        </div>
+
         </div>
         <div class="body-color min-height-20em wrapper">
             <div class="information-body">
@@ -105,7 +122,6 @@
         <iframe width="560" height="315" frameborder="0" src="https://ok.ru/videoembed/2745134746354" scrolling="no" allowfullscreen=""></iframe>
     </div>-->
 
-      <script type="module" defer src="/javascript/clipboard.js"></script>
-
+      
 </body>
 </html>
