@@ -1,10 +1,13 @@
-<header class="main-container">
-    <picture>
-        <source srcset="/series/snk/content/banner-mobile.webp" type="image/webp">
-        <img class="banner-mobile content-image__image--7tGlg" src="/series/snk/content/banner-mobile.webp" width="480" height="720" alt="Fondo de la serie">
-    </picture>
-    <picture>
-        <source srcset="/series/snk/seasons/content/banner-desktop.webp" type="image/webp">
-        <img class="banner-desktop image-container" src="/series/snk/seasons/content/banner-desktop.webp" width="640" height="360" alt="Fondo de la serie">
-    </picture>
-</header>
+<div class="test-background ">
+            
+            <div class="test-content ">
+              <picture>
+                <source srcset="" type="image/webp">
+                <img class="banner-desktop image-container" src="/series/snk/content/banner-desktop.webp" width="640" height="360" alt="Fondo de la serie">
+              </picture>
+              <picture>
+                <source srcset="" type="image/webp">
+                <img class="banner-mobile image-container" src="/series/snk/content/banner-mobile.webp" width="640" height="360" alt="Fondo de la serie">
+              </picture>
+            </div>
+</div>
