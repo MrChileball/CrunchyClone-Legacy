@@ -1,1 +1,1 @@
-import '/javascript/mediaContent.js';
+import '/javascript/episodeListGen.js';
