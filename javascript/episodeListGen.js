@@ -1,16 +1,18 @@
+// Obtiene la url completa en la que se encuentra y elimina index.html
 let href = window.location.href.slice(0, window.location.href.length - 10);;
+// Añade el prefix player.html para redireccionar al reproductor de episodios
 let playerHref = href + "player.html";
 console.log(href);
 console.log(playerHref);
-let episodeCounter = 0;
-// función asíncrona para leer datos de episodios ubicados en 
+let episodeCounter = 1; //contador para valor de ?ep=1 en los botones de cada episodio
+
+
+// función asíncrona para leer datos de episodios ubicados en un archivo JSON
 async function getEpisodes(season) {
     let listFile = 'episodes.json';
-
     try {
         let res = await fetch(listFile);
         let data = await res.json();
-        
         // Asegúrate de que season sea uno de los valores válidos (s1, s2, s3, s4, music)
         if (data.hasOwnProperty(season)) {
             return data[season];
@@ -25,10 +27,9 @@ async function getEpisodes(season) {
 
 
 async function renderEpisodes(season){
-
+    //Lee los datos de un string en base al valor de la variable season
     let users = await getEpisodes(season);
     let htmlContent = '';
-    console.log(users);
     users.forEach(episode => {
     
         let htmlSegment = `
@@ -56,7 +57,6 @@ async function renderEpisodes(season){
             </div>
         `;
 
-        console.log("Contenido añadido a la variable HtmlContent");
         htmlContent += htmlSegment;
         episodeCounter = episodeCounter + 1;
         
@@ -64,9 +64,8 @@ async function renderEpisodes(season){
     });
 
     let container = document.querySelector('.chapter-list');
-    console.log("Variable container guardada");
     container.innerHTML = htmlContent;
-    console.log("innerhtml listo")
+    episodeCounter = 1;
 
 }
 // Script que añade listeners a cada botón selector de temporada o categoría

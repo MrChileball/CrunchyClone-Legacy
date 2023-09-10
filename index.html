@@ -3,109 +3,381 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Crunchyroll | Shingeki no Kyojin</title>
-    <meta name="description" content="Watch all episodes of Attack on Titan (Shingeki No Kyojin) and enter a world where the last of mankind fight to survive against massive, man-eating titans. ">
-    <link rel="preload" as="image" href="/series/snk/content/banner-mobile.webp" />
-    
-    <!-- TODAS LAS FUENTES SE CARGAN EN STYLES.CSS -->
-
-    <!--<link rel="icon" type="image/x-icon" href="/images/favicon.ico">-->
-    
-    <script type="module" defer src="/loader.js"></script>
-    
-    <link rel="manifest" href="/manifest.json">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="icon" type="image/png" href="/images/favicon.png" />
-    
+  <title>Crunchyroll | Shingeki no Kyojin</title>
+  <meta name="description" content="Watch all episodes of Attack on Titan (Shingeki No Kyojin) and enter a world where the last of mankind fight to survive against massive, man-eating titans. ">
   
+  <!-- TODAS LAS FUENTES SE CARGAN EN STYLES.CSS -->
+  <script type="module" defer src="/loader.js"></script>
+  <script type="module" defer src="/javascript/carousel.js"></script>
+  
+  
+  
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+
+
 
 </head>
 <body>
 
-        <div id="navbar-container"></div>
-
-        <div id="main-container" class="key-art">
-        </div>
-
-        </div>
-        <div class="body-color min-height-20em wrapper">
-            <div class="information-body">
-                <div class="title-line">
-                    <h1>Attack on titan </h1>
-                    <div class="flex">
-                      <a aria-label="share button" id="share-link-button">
-                        <svg id="icon-share" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-share" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                            <path d="M6 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-                            <path d="M18 6m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-                            <path d="M18 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-                            <path d="M8.7 10.7l6.6 -3.4"></path>
-                            <path d="M8.7 13.3l6.6 3.4"></path>
-                         </svg>
-                        
-                    </a>
-                    <a aria-label="bookmark button">
-                      <svg id="icon-bookmark" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bookmark" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M9 4h6a2 2 0 0 1 2 2v14l-5 -3l-5 3v-14a2 2 0 0 1 2 -2"></path>
-                      </svg>
-                    </a>
-                    <a aria-label="like" id="heart-icon-button">
-                      <svg id="icon-heart" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
-                      </svg>
-                    </a>
-                    </div>
-                    
-                </div>
-                <div class="subtitles-line">
-                    <h5 style=" margin: 0px; color:rgb(126, 126, 126);">subtitulado</h5>
-                </div>
-                <div class="rating-starts reviews-section">
-                </div>
-                <div class="description-box">
-                    <p>Muchos años atrás, la humanidad estuvo al borde de la extinción con la aparición de unas criaturas gigantes que devoraban a todas las personas. Huyendo, la humanidad consiguió sobrevivir en una ciudad fortificada de altas murallas que se ha convertido en el último reducto de la civilización contra los Titanes que campan a sus anchas por el mundo. Ahora esa paz está a punto de verse interrumpida por una cadena de acontecimientos que llevará a desvelar qué son los Titanes y cómo aparecieron.</p>
-                </div>
-            </div>
-        </div>
-        <div class="wrapper title-line custom-black">
-          <div class="dropdown">
-            <button class="dropbtn">Temporadas - Shingeki</button>
-            <div class="dropdown-content">
-              <a aria-label="temporada 1" href="#">Temporada 1</a>
-              <a aria-label="temporada 2" href="#">Temporada 2</a>
-              <a aria-label="temporada 3" href="#">Temporada 3</a>
-              <a aria-label="temporada 4" href="#">Temporada 4</a>
-            </div>
+  <div id="navbar-container"></div>
+  <div class="container">
+    <div class="carousel">
+      <div class="carousel__wrapper">
+        <div class="carousel__header">
+          <h2 class="carousel__headline">Headline 1
+          </h2>
+          <div class="carousel__controls">
+            <button class="carousel__arrow disabled arrow-prev"></button>
+            <button class="carousel__arrow arrow-next"></button>
           </div>
         </div>
-        
-
-        <div class="wrapper min-height-35em chapter-container">
-          <div id="chapter-module"></div>
-
+        <ul class="carousel__content">
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="/images/image (1).webp" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 1
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/22/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 2
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/23/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 3
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/24/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 4
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/25/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 5
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/26/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 6
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/27/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 7
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/28/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 8
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/29/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 9
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/210/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 10
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/211/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 11
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/212/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 12
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/213/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 13
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/214/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 14
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/215/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 15
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/216/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 16
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/217/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 17
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/218/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 18
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/219/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 19
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/220/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 20
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+        </ul>
+      </div>
+      <div class="carousel__wrapper">
+        <div class="carousel__header">
+          <h2 class="carousel__headline">Headline 2
+          </h2>
+          <div class="carousel__controls">
+            <button class="carousel__arrow disabled arrow-prev"></button>
+            <button class="carousel__arrow arrow-next"></button>
+          </div>
         </div>
+        <ul class="carousel__content">
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/30/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 0
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/31/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 1
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/32/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 2
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/33/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 3
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/34/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 4
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/35/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 5
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/36/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 6
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/37/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 7
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/38/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 8
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/39/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 9
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/310/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 10
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/311/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 11
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/312/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 12
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/313/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 13
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/314/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 14
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/315/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 15
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/316/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 16
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/317/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 17
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/318/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 18
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/319/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 19
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/320/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 20
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+        </ul>
+      </div>
+      <div class="carousel__wrapper">
+        <div class="carousel__header">
+          <h2 class="carousel__headline">Headline 3
+          </h2>
+          <div class="carousel__controls">
+            <button class="carousel__arrow disabled arrow-prev"></button>
+            <button class="carousel__arrow arrow-next"></button>
+          </div>
+        </div>
+        <ul class="carousel__content">
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/40/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 0
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/41/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 1
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/42/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 2
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/43/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 3
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/44/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 4
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/45/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 5
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/46/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 6
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/47/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 7
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/48/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 8
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/49/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 9
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/410/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 10
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/411/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 11
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/412/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 12
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/413/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 13
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/414/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 14
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/415/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 15
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/416/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 16
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/417/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 17
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/418/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 18
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/419/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 19
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="https://picsum.photos/id/420/300/300" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Amazing Title 20
+                </h3><span class="carousel__subtitle">Some subtitle goes here</span>
+              </div></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="footer-container"></div>
+
+
+
         
-            <section id="comments">
 
-            </section>
-        
-        <div id="footer-container"></div>
-
-    </div>
-
-
-    
-    <!--<div role="tabpanel" class="tab-pane active">
-        <div class="Video" id="video_box"><iframe width="560" height="315" frameborder="0" src="https://streamwish.to/e/r5ikyog88shf" scrolling="no" allowfullscreen=""></iframe></div>
-    </div>
-    <div role="tabpanel" class="tab-pane active">
-        <div class="Video" id="video_box"><iframe width="560" height="315" frameborder="0" src="https://mega.nz/embed#!QT8nWDYa!zyd1XWzb9LrNFO1lceTUwsszucU2krkYfr6zZ-oXk_Y" scrolling="no" allowfullscreen=""></iframe></div>
-    </div>
-    <div class="Video" id="video_box">
-        <iframe width="560" height="315" frameborder="0" src="https://ok.ru/videoembed/2745134746354" scrolling="no" allowfullscreen=""></iframe>
-    </div>-->
 
       
 </body>
