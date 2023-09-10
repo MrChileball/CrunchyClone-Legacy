@@ -15,7 +15,7 @@
     <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="icon" type="image/png" href="/images/favicon.png" />
-    
+    <script type="module" defer src="custom.js"></script>
   
 
 </head>
@@ -72,10 +72,11 @@
           <div class="dropdown">
             <button class="dropbtn">Temporadas - Shingeki</button>
             <div class="dropdown-content">
-              <a aria-label="temporada 1" href="#">Temporada 1</a>
-              <a aria-label="temporada 2" href="#">Temporada 2</a>
-              <a aria-label="temporada 3" href="#">Temporada 3</a>
-              <a aria-label="temporada 4" href="#">Temporada 4</a>
+              <a aria-label="temporada 1" href="#" data-season="s1">Temporada 1</a>
+                <a aria-label="temporada 2" href="#" data-season="s2">Temporada 2</a>
+                <a aria-label="temporada 3" href="#" data-season="s3">Temporada 3</a>
+                <a aria-label="temporada 4" href="#" data-season="s4">Temporada 4</a>
+                <a aria-label="temporada 4" href="#" data-season="music">OST - Soundtrack</a>
             </div>
           </div>
         </div>
@@ -90,6 +91,6 @@
         <div id="footer-container"></div>
     </div>
 
-    <script type="module" defer src="custom.js"></script>
+    
 </body>
 </html>
