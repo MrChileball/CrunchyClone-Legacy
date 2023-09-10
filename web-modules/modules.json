@@ -16,10 +16,6 @@
       "contenedorId": "footer-container"
     },
     {
-      "url": "/web-modules/chapter-module",
-      "contenedorId": "chapter-module"
-    },
-    {
       "url": "/web-modules/comment-section",
       "contenedorId": "comment-section"
     }

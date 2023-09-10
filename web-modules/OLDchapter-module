@@ -1,5 +1,5 @@
 
-    <section class="chapter-list ">
+    <section class="chapter-list" onload="renderEpisodes()">
             <div class="chapter-item">
                 <picture>
                     <source srcset="" type="image/webp">
