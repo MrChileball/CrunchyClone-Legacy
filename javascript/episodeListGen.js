@@ -1,7 +1,8 @@
 // Obtiene la url completa en la que se encuentra y elimina index.html
-let href = window.location.href.slice(0, window.location.href.length - 10);;
+let href = window.location.href.slice(0, window.location.href.length - 11);;
 // Añade el prefix player.html para redireccionar al reproductor de episodios
 let playerHref = href + "player.html";
+console.log(window.location.href);
 console.log(href);
 console.log(playerHref);
 let episodeCounter = 1; //contador para valor de ?ep=1 en los botones de cada episodio
