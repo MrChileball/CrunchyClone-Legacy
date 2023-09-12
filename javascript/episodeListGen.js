@@ -42,7 +42,7 @@ async function renderEpisodes(season){
                     <p>Attack on titan - S1</p>
                     <div class="chapter-text">
                         <h4 class="custom-padding">${episode.title}</h4>
-                        <button  onclick="window.location.href = '${playerHref}?ep=${episodeCounter}'" class="flex button">
+                        <button  onclick="window.location.href = '${playerHref}?s=${season}&ep=${episodeCounter}'" class="flex button">
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon-tabler icon-tabler-player-play" width="32" height="32" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                 <path d="M7 4v16l13 -8z"></path>
