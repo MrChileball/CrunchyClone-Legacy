@@ -91,10 +91,10 @@ window.addEventListener( 'load', () => {
 		/**
 		 * Mouse up handler.
 		 */
-		const mouseupHandler = () => {
+		/*const mouseupHandler = () => {
 			mx = 0;
 			content.classList.remove( 'dragging' );
-		};
+		};*/
 
 		content.addEventListener( 'mousemove', mousemoveHandler );
 		content.addEventListener( 'mousedown', mousedownHandler );

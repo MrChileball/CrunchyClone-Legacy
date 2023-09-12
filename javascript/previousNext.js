@@ -36,7 +36,6 @@ function getQueryParam(param) {
     if (episodeNumber) {
       cargarEpisodio(season, Number(episodeNumber));
     }
-
   });
 
 
