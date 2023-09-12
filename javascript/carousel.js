@@ -61,11 +61,11 @@ window.addEventListener( 'load', () => {
 		 *
 		 * @param {object} e event object.
 		 */
-		const mousedownHandler = ( e ) => {
+		/*const mousedownHandler = ( e ) => {
 			content.sx = content.scrollLeft;
 			mx = e.pageX - content.offsetLeft;
 			content.classList.add( 'dragging' );
-		};
+		};*/
 
 		/**
 		 * Scroll handler.
