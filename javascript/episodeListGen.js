@@ -1,5 +1,5 @@
 // Obtiene la url completa en la que se encuentra y elimina index.html
-let href = window.location.href.slice(0, window.location.href.length - 10);;
+let href = window.location.href.slice(0, window.location.href.length - 5);;
 // Añade el prefix player.html para redireccionar al reproductor de episodios
 let playerHref = href + "player.html";
 let hrefOriginal = window.location.href + "/player.html";
