@@ -1,6 +1,5 @@
-<div class="test-background ">
-            
-            <div class="test-content ">
+            <div class="main-background"></div>          
+            <div class="main-content ">
               <picture>
                 <source srcset="" type="image/webp">
                 <img class="banner-desktop image-container" src="/series/snk/content/banner-desktop.webp" width="640" height="360" alt="Fondo de la serie">
@@ -10,4 +9,3 @@
                 <img class="banner-mobile image-container" src="/series/snk/content/banner-mobile.webp" width="640" height="360" alt="Fondo de la serie">
               </picture>
             </div>
-</div>
