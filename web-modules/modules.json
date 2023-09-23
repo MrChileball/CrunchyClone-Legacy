@@ -4,19 +4,11 @@
       "contenedorId": "navbar-container"
     },
     {
-      "url": "/series/snk/main-container",
-      "contenedorId": "main-containerSNK"
-    },
-    {
       "url": "/web-modules/main-container",
       "contenedorId": "main-container"
     },
     {
       "url": "/web-modules/footer-container",
       "contenedorId": "footer-container"
-    },
-    {
-      "url": "/web-modules/comment-section",
-      "contenedorId": "comment-section"
     }
   ]
