@@ -1,3 +1,4 @@
+
 let path = location.pathname;
 let value =`(${path}content/banner-mobile.webp) no-repeat center center`;
 let valueDesktop =`${path}content/banner-desktop.webp`;
