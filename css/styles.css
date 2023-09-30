@@ -568,7 +568,6 @@ p{
   color: #fff;
 }
 .carousel img {
-  aspect-ratio: 4/5;
   background-size: cover;
   background-position: center;
   -webkit-user-drag: none;
