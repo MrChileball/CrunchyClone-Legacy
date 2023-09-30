@@ -539,11 +539,15 @@ p{
 
 .key-art {
   display: flex;
-  position: relative;
-  width: 100%;
-  min-height: auto;
-  align-content: center;
-  justify-content: center;
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    place-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+
 }
 
 
@@ -572,7 +576,7 @@ p{
     -moz-user-drag: none;
     -o-user-drag: none;
     user-drag: none;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
     border-radius: clamp(0px, ((100vw - 4px) - 100%) * 9999, 4px);
     width: 160px;
 }
@@ -619,9 +623,10 @@ p{
   cursor: grab;
   padding: 0;
   margin: 0;
-  grid-gap: 24px;
+  grid-gap: 1px;
   grid-auto-flow: column;
   list-style: none;
+
 }
 .carousel .carousel__content::-webkit-scrollbar {
   display: none;
@@ -639,9 +644,13 @@ p{
   user-select: none;
   margin: 10px 0px;
   padding: 16px;
-  background: var(--custom-rich-black);
+
   border-radius: clamp(0px, ((100vw - 4px) - 100%) * 9999, 8px);
   cursor: pointer;
+}
+.carousel .carousel__item a:hover {
+  background: var(--custom-rich-black);
+  transition: all 0.2s ease-in;
 }
 .carousel .carousel__controls {
   display: grid;
@@ -674,8 +683,22 @@ p{
   filter: brightness(2);
 }
 
-.disclaimer a {
-  color: #fff;
+
+
+#main {
+	background: linear-gradient(0deg, rgba(33,33,33,1) 5%, rgba(255,255,255,0) 100%) center center / cover, url(/images/homepage/vinland1.webp) center center / cover;
+	background-size: cover, cover;
+	background-position: center, center;
+	min-height: 65vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+  filter: grayscale(0.4);
+
 }
 
 
