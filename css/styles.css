@@ -685,7 +685,7 @@ p{
 
 
 #main {
-	background: linear-gradient(0deg, rgba(33,33,33,1) 5%, rgba(255,255,255,0) 100%) center center / cover, url(/images/homepage/vinland1.webp) center center / cover;
+	background: url(/images/homepage/vinland1.webp) center center / cover;
 	background-size: cover, cover;
 	background-position: center, center;
 	min-height: 65vh;
@@ -696,8 +696,17 @@ p{
   margin: 0;
   padding: 0;
   border-width: 0;
-  filter: grayscale(0.4);
+  filter: grayscale(0.5);
 
+}
+/* linear-gradient(to bottom, transparent , rgba(33, 33, 33, 0.966)),  */
+#main::after {
+  background:linear-gradient(0deg,hsl(0, 0%, 13%,.987) 1.62%,hsl(0, 0%, 13%,.951) 3.1%,hsl(0, 0%, 13%,.896) 4.5%,hsl(0, 0%, 13%,.825) 5.8%,hsl(0, 0%, 13%,.741) 7.06%,hsl(0, 0%, 13%,.648) 8.24%,hsl(0, 0%, 13%,.55) 9.42%,hsl(0, 0%, 13%,.45) 10.58%,hsl(0, 0%, 13%,.352) 11.76%,hsl(0, 0%, 13%,.259) 12.94%,hsl(0, 0%, 13%,.175) 14.2%,hsl(0, 0%, 13%,.104) 15.5%,hsl(0, 0%, 13%,.049) 16.9%,hsl(0, 0%, 13%,.013) 18.38%,hsl(0, 0%, 13%,0) 20%);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  width: 100%;
 }
 
 
